@@ -1,0 +1,100 @@
+.home-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.35) url('/dist/img/summer-hill-villa.jpg') no-repeat center;
+  background-size: cover;
+  height: 500px;
+  margin-bottom: 25px;
+}
+
+.home-header-title {
+    margin-top: 110px;
+    text-align: center;
+    color: white;
+
+    h1 {
+        font-size: 73px;
+    }
+    h2 {
+        font-size: 28px;
+    }
+    button {
+        margin-top: 50px;
+        background: none;
+        border: 1px solid white;
+        h1 {
+            font-size: 22px;
+            padding: 5px;
+            margin: 0;
+        }
+        &:hover {
+            background-color: white;
+            color: $dark-blue;
+        }
+    }
+}
+
+.home-intro {
+  margin-bottom: 50px;
+}
+
+.home-st-martin {
+  button {
+    background-color: white;
+    color: $dark-blue;
+    border: 1px solid $dark-blue;
+
+    h1 {
+      padding: 10px;
+    }
+
+    &:hover {
+      background-color: $dark-blue;
+      color: white;
+      border: none;
+      margin: 2px;
+    }
+  }
+}
+
+.home-st-martin-img {
+  height: 500px;
+  width: 90%;
+  border-radius: 20px;
+  margin: auto;
+  background-image: url('/dist/img/home-header-background.png');
+  background-position: center;
+}
+
+.home-testimonials {
+  height: 500px;
+  width: 100%;
+  background-color: $gray-blue;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.home-estates {
+
+}
+
+.home-contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+
+  button {
+    background-color: white;
+    color: $dark-blue;
+    border: 2px solid $dark-blue;
+
+    h1 {
+      padding: 10px;
+    }
+
+    &:hover {
+      background-color: $dark-blue;
+      color: white;
+      border: none;
+      margin: 2px;
+    }
+  }
+}
