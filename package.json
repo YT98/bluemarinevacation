@@ -6,7 +6,7 @@
   "scripts": {
     "watch-server": "webpack --config webpack.config.server.js --watch",
     "watch-client": "webpack --config webpack.config.client.js --watch",
-    "watch-sass": "sass --watch ./dist/scss/_main.scss:./dist/style.css",
+    "watch-sass": "sass --watch ./public/scss/_main.scss:./public/style.css",
     "clean": "rm -rf ./dist",
     "build": "npm run clean && webpack --config webpack.config.server.js && webpack --config webpack.config.client.js",
     "devstart": "nodemon dist/server.js",

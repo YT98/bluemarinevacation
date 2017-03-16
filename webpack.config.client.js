@@ -9,7 +9,7 @@ module.exports = {
     entry: './client/index.js',
     output: {
         path: distPath,
-        filename: 'client.js',
+        filename: '/client/client.bundle.js',
         publicPath: '/'
     },
     resolve: {

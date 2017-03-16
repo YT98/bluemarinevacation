@@ -4,6 +4,7 @@ This repo was made for personal use but feel free to browse my code.
 
 Stack :
 - Node.js
+- MongoDB
 - Express
 - React.js
 

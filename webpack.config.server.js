@@ -8,7 +8,7 @@ module.exports = {
     entry: './server/index.js',
     output: {
         path: distPath,
-        filename: 'server.js'
+        filename: 'server.bundle.js'
     },
     target: 'node',
     node: {

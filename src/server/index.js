@@ -74,7 +74,8 @@ import routes from '../routes';
 import template from '../template';
 
 //  SERVER-SIDE RENDERING
-app.use('/dist', express.static(__dirname));
+app.use('/dist/client', express.static(__dirname + '/client'));
+app.use('/public', express.static(__dirname + '/../public'));
 
 app.get('*', (req, res) => {
   match( {routes, location: req.url}, (error, redirectLocation, renderProps) => {
