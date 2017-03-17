@@ -43,7 +43,7 @@ body {
       background-color: white; }
 
 .home-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/summer-hill-villa.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/home-background.jpg") no-repeat center;
   background-size: cover;
   height: 500px;
   margin-bottom: 25px; }
@@ -119,6 +119,12 @@ body {
   background-size: cover;
   height: 150px;
   color: white; }
+
+.estates-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/estates-background.jpg") no-repeat center;
+  background-size: cover;
+  color: white;
+  height: 150px; }
 
 .contact-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/contact-background.jpg") no-repeat center;

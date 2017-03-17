@@ -9,8 +9,8 @@
     "watch-sass": "sass --watch ./public/scss/_main.scss:./public/style.css",
     "clean": "rm -rf ./dist",
     "build": "npm run clean && webpack --config webpack.config.server.js && webpack --config webpack.config.client.js",
-    "devstart": "nodemon dist/server.js",
-    "prodstart": "node dist/server.js"
+    "devstart": "nodemon dist/server.bundle.js",
+    "prodstart": "node dist/server.bundle.js"
   },
   "author": "",
   "license": "ISC",

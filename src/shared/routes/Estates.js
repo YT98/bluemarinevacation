@@ -21,7 +21,7 @@ export default class Estates extends React.Component {
 
     return(
       <div>
-        <div>
+        <div class="estates-header">
           <Navbar />
         </div>
 
