@@ -4,10 +4,10 @@ export default class Carousel extends React.Component {
   render() {
 
     const estatesArray = [
-      {id: 1, name: "Summer Hill", url: "dist/img/summer-hill-villa.jpg", type: "Villa"},
-      {id: 2, name: "Little Dream", url: "dist/img/summer-hill-villa.jpg", type: "Apartment"},
-      {id: 3, name:"Palm Tree", url:"dist/img/summer-hill-villa.jpg", type:"Apartment"},
-      {id: 4, name:"Fidji", url:"dist/img/summer-hill-villa.jpg", type:"Duplex"}
+      {id: 1, name: "Summer Hill", url: "public/img/summer-hill-villa.jpg", type: "Villa"},
+      {id: 2, name: "Little Dream", url: "public/img/summer-hill-villa.jpg", type: "Apartment"},
+      {id: 3, name:"Palm Tree", url:"public/img/summer-hill-villa.jpg", type:"Apartment"},
+      {id: 4, name:"Fidji", url:"public/img/summer-hill-villa.jpg", type:"Duplex"}
     ];
 
     const generateFirst = (obj) => (
