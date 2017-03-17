@@ -23,9 +23,12 @@ export default class Estates extends React.Component {
       <div>
         <div class="estates-header">
           <Navbar />
+          <h1> Estates </h1>
         </div>
 
-        <EstatesMap center={center} markers={markers} />
+        <div class="map-container">
+          <EstatesMap center={center} markers={markers} />
+        </div>
       </div>
     );
   };

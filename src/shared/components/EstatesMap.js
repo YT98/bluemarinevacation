@@ -27,7 +27,8 @@ export default class EstatesMap extends React.Component{
             scrollwheel: false}}>
             { markers }
           </GoogleMap>
-        } />
+        }
+      />
     );
   };
 };
