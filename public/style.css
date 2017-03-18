@@ -126,9 +126,17 @@ body {
   color: white;
   height: 150px; }
 
-.map-container {
-  width: 100%;
-  height: 200px; }
+.estates-container {
+  height: 550px;
+  width: 100%; }
+  .estates-container .pane-container {
+    height: 100%;
+    width: 50%;
+    float: left; }
+  .estates-container .map-container {
+    height: 100%;
+    width: 50%;
+    float: right; }
 
 .contact-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/contact-background.jpg") no-repeat center;

@@ -5,7 +5,21 @@
   height: 150px;
 }
 
-.map-container {
+.estates-container {
+  height: 550px;
   width: 100%;
-  height: 200px;
+
+  //Pane will need span full width on mobile.
+  .pane-container {
+    height: 100%;
+    width: 50%;
+    float: left;
+  }
+
+  //Map will need to disapear on mobile.
+  .map-container {
+    height: 100%;
+    width: 50%;
+    float: right;
+  }
 }
