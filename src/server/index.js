@@ -71,8 +71,8 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from '../routes';
-import template from '../template';
-import config from '../config.js';
+import template from './template';
+import config from './config';
 
 //  SERVER-SIDE RENDERING
 app.use('/dist/client', express.static(__dirname + '/client'));
