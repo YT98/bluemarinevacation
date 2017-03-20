@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
-import Carousel from '../components/Carousel';
 
 export default class Home extends React.Component {
   render() {

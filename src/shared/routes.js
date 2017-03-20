@@ -2,11 +2,11 @@ import React from 'react';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
 // Component importing
-import Layout from './shared/Layout';
-import Home from './shared/routes/Home';
-import SaintMartin from './shared/routes/SaintMartin';
-import Estates from './shared/routes/Estates';
-import Contact from './shared/routes/Contact';
+import Layout from './Layout';
+import Home from './routes/Home';
+import SaintMartin from './routes/SaintMartin';
+import Estates from './routes/Estates';
+import Contact from './routes/Contact';
 
 
 // Routes
