@@ -5,6 +5,12 @@
   height: 150px;
 }
 
+.estates-filter {
+  height: 50px;
+  width: 100%;
+  display: flex;
+}
+
 .estates-container {
   height: 550px;
   width: 100%;
@@ -14,6 +20,7 @@
     height: 100%;
     width: 50%;
     float: left;
+    overflow: scroll;
   }
 
   //Map will need to disapear on mobile.

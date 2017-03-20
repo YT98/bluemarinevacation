@@ -1,8 +1,22 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import EstatesMap from '../components/EstatesMap';
+import EstateCardsContainer from '../components/EstateCardsContainer';
+import EstatesFilter from '../components/EstatesFilter';
 
 export default class Estates extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: [
+        {id: 1, name: "Little Dream", url: "public/img/estates/littledream001.png", type: "Studio"},
+        {id: 2, name: "Summer Hill", url: "public/img/estates/summerhill001.png", type: "Villa"},
+        {id: 3, name:"Palm Tree", url:"public/img/estates/palmtree001.png", type:"Apartment"},
+        {id: 4, name:"Fidji", url:"public/img/estates/fidji001.png", type:"Duplex"}
+      ]
+    };
+  };
+
   render () {
 
     const center = {
@@ -33,9 +47,11 @@ export default class Estates extends React.Component {
           <h1> Estates </h1>
         </div>
 
+        <EstatesFilter />
+
         <div class="estates-container">
           <div class="pane-container">
-            <p> Estates here. </p>
+            <EstateCardsContainer data={this.state.data}/>
           </div>
           <div class="map-container">
             <EstatesMap center={center} markers={markers} />

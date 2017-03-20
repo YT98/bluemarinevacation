@@ -45,7 +45,7 @@ body {
 .home-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/home-background.jpg") no-repeat center;
   background-size: cover;
-  height: 500px;
+  height: 80vh;
   margin-bottom: 25px; }
 
 .home-header-title {
@@ -126,13 +126,19 @@ body {
   color: white;
   height: 150px; }
 
+.estates-filter {
+  height: 50px;
+  width: 100%;
+  display: flex; }
+
 .estates-container {
   height: 550px;
   width: 100%; }
   .estates-container .pane-container {
     height: 100%;
     width: 50%;
-    float: left; }
+    float: left;
+    overflow: scroll; }
   .estates-container .map-container {
     height: 100%;
     width: 50%;
