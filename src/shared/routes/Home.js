@@ -10,7 +10,7 @@ export default class Home extends React.Component {
         <div class="home-header">
           <Navbar />
           <div class="home-header-title">
-              <h1> Blue Marine Vacation </h1>
+              <h1> Holiday Homes 7 </h1>
               <h2> Location saisonière de standing || St.Marteen </h2>
               <button> <h1>Réservez dès maintenant !</h1> </button>
           </div>
@@ -35,8 +35,6 @@ export default class Home extends React.Component {
             <button> Pour en apprendre plus sur Saint-Martin </button>
           </div>
         </div>
-
-        <Carousel />
 
         <div class="row home-contact">
           <button ref="button"> <h1>Contactez-nous !</h1> </button>
