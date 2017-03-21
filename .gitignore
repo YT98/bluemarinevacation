@@ -2,4 +2,4 @@
 /.sass-cache
 npm-debug.log
 /dist
-/src/config.js
+/src/server/config.js
