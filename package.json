@@ -19,6 +19,7 @@
     "babel-plugin-react-html-attrs": "^2.0.0",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
+    "lodash": "^4.17.4",
     "mongoose": "^4.8.6",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",

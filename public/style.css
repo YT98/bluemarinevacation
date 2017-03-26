@@ -134,11 +134,19 @@ body {
 .estates-container {
   height: 550px;
   width: 100%; }
-  .estates-container .pane-container {
+  .estates-container .estate-cards-container {
     height: 100%;
     width: 50%;
     float: left;
-    overflow: scroll; }
+    overflow-y: scroll; }
+    .estates-container .estate-cards-container .estate-cards-wrapper {
+      width: 100%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: row wrap; }
   .estates-container .map-container {
     height: 100%;
     width: 50%;

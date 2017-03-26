@@ -1,8 +1,8 @@
 import React from 'react';
+import _ from 'lodash';
 import Navbar from '../components/Navbar';
 import EstatesMap from '../components/EstatesMap';
 import EstateCardsContainer from '../components/EstateCardsContainer';
-import EstatesFilter from '../components/EstatesFilter';
 
 export default class Estates extends React.Component {
   constructor(props) {
@@ -46,12 +46,10 @@ export default class Estates extends React.Component {
           <Navbar />
           <h1> Estates </h1>
         </div>
-
-        <EstatesFilter />
-
+        
         <div class="estates-container">
-          <div class="pane-container">
-            <EstateCardsContainer data={this.state.data}/>
+          <div class="estate-cards-container">
+            <EstateCardsContainer data={this.state.data} />
           </div>
           <div class="map-container">
             <EstatesMap center={center} markers={markers} />

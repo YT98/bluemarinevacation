@@ -16,11 +16,21 @@
   width: 100%;
 
   //Pane will need span full width on mobile.
-  .pane-container {
+  .estate-cards-container {
     height: 100%;
     width: 50%;
     float: left;
-    overflow: scroll;
+    overflow-y: scroll;
+
+    .estate-cards-wrapper {
+      width: 100%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-flow: row wrap;
+    }
   }
 
   //Map will need to disapear on mobile.
