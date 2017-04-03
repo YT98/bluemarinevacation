@@ -5,10 +5,10 @@ export default class Footer extends React.Component {
     return (
     <div class="footer">
       <div class="footer-navigation">
-        <h4> Accueil </h4>
-        <h4> Saint-Martin </h4>
-        <h4> Nos Propriétés </h4>
-        <h4> Contact </h4>
+        <h5> Accueil </h5>
+        <h5> Saint-Martin </h5>
+        <h5> Nos Propriétés </h5>
+        <h5> Contact </h5>
       </div>
       <div>
         <p> Copyright </p>
