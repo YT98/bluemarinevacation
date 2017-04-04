@@ -151,6 +151,8 @@ body {
   background-size: cover;
   color: white;
   height: 150px; }
+  .estates-header h1 {
+    margin-left: 15px; }
 
 .estates-filter {
   height: 50px;
@@ -183,6 +185,8 @@ body {
   background-size: cover;
   color: white;
   height: 150px; }
+  .contact-header h1 {
+    margin-left: 15px; }
 
 .footer {
   background-color: #36454f;
