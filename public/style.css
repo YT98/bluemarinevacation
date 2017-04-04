@@ -114,11 +114,37 @@ body {
       border: none;
       margin: 2px; }
 
+.st-martin-container h1 {
+  color: #2A93D5; }
+
 .saint-martin-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/saint-martin-background.jpg") no-repeat center;
   background-size: cover;
-  height: 150px;
-  color: white; }
+  height: 150px; }
+  .saint-martin-header h1 {
+    color: white;
+    margin-left: 15px; }
+
+.intro-st-martin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  font-weight: light; }
+
+.map {
+  background-color: #AED9DA;
+  text-align: center; }
+
+.geographie, .histoire {
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.investir {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px; }
 
 .estates-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/estates-background.jpg") no-repeat center;

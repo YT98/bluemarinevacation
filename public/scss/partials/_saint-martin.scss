@@ -1,6 +1,43 @@
+.st-martin-container{
+  h1 {
+    color: $blue;
+  }
+}
+
 .saint-martin-header {
   background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.35) url('/public/img/saint-martin-background.jpg') no-repeat center;
   background-size: cover;
   height: 150px;
-  color: white;
+  h1 {
+    color: white;
+    margin-left: 15px;
+  }
+}
+
+.intro-st-martin {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 15px;
+  font-weight: light;
+}
+
+.map {
+  background-color: $light-blue;
+  text-align: center;
+}
+
+.geographie {
+  margin-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.histoire {
+  @extend .geographie;
+}
+
+.investir {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-left: 15px;
+  padding-right: 15px;
 }

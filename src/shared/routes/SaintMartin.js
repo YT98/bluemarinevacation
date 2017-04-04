@@ -4,45 +4,37 @@ import Navbar from '../components/Navbar';
 export default class SaintMartin extends React.Component {
   render() {
     return(
-      <div>
+      <div class="st-martin-container">
         <div class="saint-martin-header">
           <Navbar />
           <h1> Saint-Martin </h1>
         </div>
 
-        <div style={{marginTop: '50px'}} class="row">
+        <div class="intro-st-martin row">
           <div class="col-md-6">
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-          </div>
-          <div class="col-md-6">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
 
-        <div style={{marginTop: '50px'}} class="row">
-          <div class="col-md-6">
-            <h2> Geographie </h2>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <div class="map row">
+          <img src="./public/img/carte.svg"/>
+        </div>
+
+        <div class="row histoire">
+          <div class="geographie col-md-6">
+            <h1> Geographie </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
-          <div class="col-md-6">
+          <div class="histoire col-md-6">
+            <h1> Histoire </h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </div>
         </div>
 
-        <div style={{marginTop: '50px'}} class="row">
-          <div class="col-md-6">
-            <h2> Histoire </h2>
+        <div class="investir row">
+          <div class="col-md-12">
+            <h1> Pourquoi investir à Saint-Martin </h1>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
-          </div>
-          <div class="col-md-6">
-            <h2> Monuments </h2>
-            <ul>
-              <li> 1 </li>
-              <li> 2 </li>
-              <li> 3 </li>
-              <li> 4 </li>
-              <li> 5 </li>
-              <li> 6 </li>
-              <li> 7 </li>
-            </ul>
           </div>
         </div>
 
