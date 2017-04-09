@@ -7,3 +7,21 @@
     margin-left: 15px;
   }
 }
+
+.contact-info {
+  background-color: $light-gray;
+}
+
+.formulaire {
+  background-color: $gray-blue;
+
+  .input_sm {
+    border: none;
+    border-bottom: 4px solid $dark-blue;
+    background-color: $gray-blue;
+    &:focus{
+        background-color: $dark-blue;
+        color: white;
+    }
+  }
+}

@@ -134,6 +134,9 @@ body {
 .map {
   background-color: #AED9DA;
   text-align: center; }
+  .map img {
+    margin-top: 30px;
+    margin-bottom: 30px; }
 
 .geographie, .histoire {
   margin-top: 30px;
@@ -187,6 +190,19 @@ body {
   height: 150px; }
   .contact-header h1 {
     margin-left: 15px; }
+
+.contact-info {
+  background-color: #D3D3D3; }
+
+.formulaire {
+  background-color: #EDFAFD; }
+  .formulaire .input_sm {
+    border: none;
+    border-bottom: 4px solid #135589;
+    background-color: #EDFAFD; }
+    .formulaire .input_sm:focus {
+      background-color: #135589;
+      color: white; }
 
 .footer {
   background-color: #36454f;

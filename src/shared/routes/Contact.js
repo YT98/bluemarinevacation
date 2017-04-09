@@ -14,7 +14,7 @@ export default class Contact extends React.Component {
         </div>
 
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 contact-info">
 
             <h1> Contact </h1>
             <p> <i class="fa fa-address-book-o" style={{paddingRight: '10px'}}></i> 514-918-3412 </p>
@@ -23,7 +23,7 @@ export default class Contact extends React.Component {
 
           </div>
 
-          <div class="col-md-9">
+          <div class="col-md-9 formulaire">
 
             <form class="col-md-6 col-sm-6 col-xs-12">
               <p> Prénom et nom de famille: </p>
