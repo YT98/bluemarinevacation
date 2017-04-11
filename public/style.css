@@ -189,6 +189,9 @@ body {
     margin-top: 30px;
     margin-bottom: 30px; }
 
+@media (max-width: 520px) {
+  .map img {
+    width: 100%; } }
 .geographie, .histoire {
   margin-top: 30px;
   padding-left: 15px;

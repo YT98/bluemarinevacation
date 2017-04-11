@@ -31,6 +31,14 @@
   }
 }
 
+@media (max-width: 520px) {
+  .map {
+    img {
+      width: 100%;
+    }
+  }
+}
+
 .geographie {
   margin-top: 30px;
   padding-left: 15px;
