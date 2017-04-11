@@ -107,13 +107,47 @@ body {
     color: #135589;
     border: 2px solid #135589; }
     .home-contact button h1 {
-      padding: 10px; }
+      margin: 0;
+      padding: 15px; }
     .home-contact button:hover {
       background-color: #135589;
       color: white;
       border: none;
       margin: 2px; }
 
+.home-estates {
+  margin-top: 50px;
+  background-color: #135589; }
+  .home-estates h1 {
+    margin-left: 50px;
+    padding-top: 50px;
+    color: white; }
+  .home-estates button {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    background: none;
+    border: 1px solid white;
+    color: white; }
+    .home-estates button h3 {
+      margin: 0;
+      padding: 10px; }
+    .home-estates button:hover {
+      background-color: white;
+      color: #135589;
+      border: none; }
+      .home-estates button:hover h3 {
+        padding: 11px; }
+  .home-estates img {
+    margin-top: 50px; }
+
+@media (min-width: 895px) and (max-width: 1800px) {
+  .home-estates {
+    display: flex;
+    justify-content: space-between; } }
+@media (min-width: 0px) and (max-width: 895px) {
+  .home-estates img {
+    display: none; } }
 .st-martin-container h1 {
   color: #135589; }
 

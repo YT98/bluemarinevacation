@@ -35,6 +35,16 @@ export default class Home extends React.Component {
           </div>
         </div>
 
+        <div class="home-estates">
+          <div>
+            <h1> Visionez nos <br /> propriétés avec facilité. </h1>
+            <button> <h3> Cliquez ici ! </h3> </button>
+          </div>
+          <div>
+            <img class="img-responsive" src="./public/img/computer_screens.png" />
+          </div>
+        </div>
+
         <div class="row home-contact">
           <button ref="button"> <h1>Contactez-nous !</h1> </button>
         </div>
