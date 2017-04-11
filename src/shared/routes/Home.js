@@ -18,10 +18,10 @@ export default class Home extends React.Component {
 
         <div class="row home-intro">
           <div class="col-md-4 col-sm-4">
-            <h2 style={{textAlign: "right"}}> <strong style={{color: "#135589"}}>Profitez</strong> <br/> de Saint-Martin. </h2>
+            <h2> <strong style={{color: "#135589"}}>Profitez</strong> <br/> de Saint-Martin. </h2>
           </div>
           <div class="col-md-8 col-sm-8">
-            <p style={{textAlign: "left", marginTop: "20px", marginRight: "30px"}}> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
+            <p style={{ marginTop: "20px", marginRight: "30px"}}> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.</p>
           </div>
         </div>
 
