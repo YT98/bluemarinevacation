@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import { Link } from 'react-router'
 
 export default class Home extends React.Component {
   render() {
@@ -11,7 +12,7 @@ export default class Home extends React.Component {
           <div class="home-header-title">
               <h1> Holiday Homes 7 </h1>
               <h2> Location saisonière de standing || St.Marteen </h2>
-              <button> <h1>Réservez dès maintenant !</h1> </button>
+              <Link to="/contact"> <button> <h1>Réservez dès maintenant !</h1> </button> </Link>
           </div>
         </div>
 
@@ -30,7 +31,6 @@ export default class Home extends React.Component {
           </div>
           <div class="col-md-6 col-sm-6">
             <h1> <strong style={{color: "#135589"}}> Saint-Martin, </strong> <br /> la friendly island. </h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
             <button> Pour en apprendre plus sur Saint-Martin </button>
           </div>
         </div>
