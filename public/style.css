@@ -43,7 +43,7 @@ body {
       background-color: white; }
 
 .home-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/home-background.jpg") no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0, 0, 0, 0.35) url("/public/img/home-header.jpg") no-repeat center;
   background-size: cover;
   height: 80vh;
   margin-bottom: 25px; }
@@ -85,11 +85,12 @@ body {
     margin-left: 30px;
     text-align: center; } }
 .home-st-martin button {
+  margin-top: 10px;
   background-color: white;
   color: #135589;
   border: 1px solid #135589; }
   .home-st-martin button h1 {
-    padding: 10px; }
+    margin-top: 20px; }
   .home-st-martin button:hover {
     background-color: #135589;
     color: white;
@@ -104,15 +105,9 @@ body {
   width: 90%;
   border-radius: 20px;
   margin: auto;
-  background-image: url("/public/img/saintmartin-snippet.jpg");
-  background-position: center; }
-
-.home-testimonials {
-  height: 500px;
-  width: 100%;
-  background-color: #EDFAFD;
-  margin-top: 50px;
-  margin-bottom: 50px; }
+  background-image: url("/public/img/saint-martin-snippet.jpg");
+  background-size: cover;
+  background-position: right; }
 
 .home-contact {
   margin-top: 50px;
@@ -133,37 +128,32 @@ body {
 
 .home-estates {
   margin-top: 50px;
-  background-color: #135589; }
+  background-image: url("/public/img/estate.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 300px;
+  color: white; }
+  .home-estates div {
+    height: 100%;
+    background: linear-gradient(rgba(19, 85, 137, 0.55), rgba(19, 85, 137, 0.55)), rgba(19, 85, 137, 0.35); }
   .home-estates h1 {
+    padding-top: 30px;
+    margin-top: 0;
     margin-left: 50px;
-    padding-top: 50px;
-    color: white; }
+    margin-bottom: 20px; }
   .home-estates button {
-    margin-top: 20px;
-    margin-bottom: 50px;
     margin-left: 50px;
+    color: white;
     background: none;
-    border: 1px solid white;
-    color: white; }
-    .home-estates button h3 {
-      margin: 0;
-      padding: 10px; }
+    border: 1px solid white; }
+    .home-estates button p {
+      padding: 5px;
+      margin: 0; }
     .home-estates button:hover {
       background-color: white;
-      color: #135589;
-      border: none; }
-      .home-estates button:hover h3 {
-        padding: 11px; }
-  .home-estates img {
-    margin-top: 50px; }
+      color: #135589; }
 
-@media (min-width: 895px) and (max-width: 1800px) {
-  .home-estates {
-    display: flex;
-    justify-content: space-between; } }
-@media (min-width: 0px) and (max-width: 895px) {
-  .home-estates img {
-    display: none; } }
 .st-martin-container h1 {
   color: #135589; }
 
@@ -172,7 +162,7 @@ body {
   background-size: cover;
   height: 150px; }
   .saint-martin-header h1 {
-    color: white;
+    color: #f49542;
     margin-left: 15px; }
 
 .intro-st-martin {

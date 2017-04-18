@@ -35,13 +35,10 @@ export default class Home extends React.Component {
           </div>
         </div>
 
-        <div class="home-estates">
-          <div>
-            <h1> Visionez nos <br /> propriétés avec facilité. </h1>
-            <button> <h3> Cliquez ici ! </h3> </button>
-          </div>
-          <div>
-            <img class="img-responsive" src="./public/img/computer_screens.png" />
+        <div class="row home-estates">
+          <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 sol-xs-12">
+            <h1> <strong> Lorem ipsum, </strong> <br/> dolor amet.</h1>
+            <button> Consultez nos propriétés !</button>
           </div>
         </div>
 
