@@ -77,7 +77,6 @@ import { renderToString } from 'react-dom/server';
 import { match, RouterContext } from 'react-router';
 import routes from '../shared/routes';
 import template from './template';
-import config from './config';
 
 //  SERVER-SIDE RENDERING
 app.use('/dist/client', express.static(__dirname + '/client'));
@@ -91,7 +90,6 @@ app.get('*', (req, res) => {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
       let html = renderToString(<RouterContext {...renderProps} />);
-      let googleMapsApiKey = config.googleMapsUrl;
       res.status(200).send(template({body: html}));
     } else {
       res.status(400).send('Not found.')
