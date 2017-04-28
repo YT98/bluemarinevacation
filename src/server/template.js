@@ -3,10 +3,11 @@ export default ({ body, googleMapsApiKey }) => {
     <!DOCTYPE html>
     <html>
       <head>
-        <title>Holiday Homes 7</title>
+        <title>Holiday Homes 7 | Investissements immobiliers </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://use.fontawesome.com/0cee7cce00.js"></script>
         <link rel="stylesheet" href="/public/style.css" />
-        <script src=${googleMapsApiKey} ></script>
       </head>
 
       <body>

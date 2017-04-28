@@ -2,68 +2,73 @@
 import express from 'express';
 var app = express();
 
+import cool from 'cool-ascii-faces';
+app.get('/cool', function(request, response) {
+  response.send(cool());
+});
+
 // Restful API module imports
-import bodyParser from 'body-parser';
-import mongoose from 'mongoose';
-import Estate from './models/estate';
+// import bodyParser from 'body-parser';
+// import mongoose from 'mongoose';
+// import Estate from './models/estate';
 
 //  RESTFUL API
-app.use(bodyParser.json());
+// app.use(bodyParser.json());
 
 // Connect to mongoose
-mongoose.connect('mongodb://localhost/bookstore');
-var db = mongoose.connection;
+// mongoose.connect('mongodb://localhost/bookstore');
+// var db = mongoose.connection;
 
 // Get EstateS
-app.get('/api/estates', (req, res) => {
-    Estate.getEstates((err, estates) => {
-        if(err) {
-            throw err;
-        }
-        else {
-            res.json(estates);
-        }
-    });
-});
+// app.get('/api/estates', (req, res) => {
+//     Estate.getEstates((err, estates) => {
+//         if(err) {
+//             throw err;
+//         }
+//         else {
+//             res.json(estates);
+//         }
+//     });
+// });
 
 // Get Estate :/id
-app.get('/api/estates/:_id', (req, res) => {
-  Estate.getEstateById(req.params._id, (err, estate) => {
-    if(err) {
-      throw(err);
-    } else {
-      res.json(estate);
-    }
-  })
-})
+// app.get('/api/estates/:_id', (req, res) => {
+//   Estate.getEstateById(req.params._id, (err, estate) => {
+//     if(err) {
+//       throw(err);
+//     } else {
+//       res.json(estate);
+//     }
+//   })
+// })
 
 // Post Estate
-app.post('/api/estates', (req, res) => {
-    var estate = req.body;
-    Estate.addEstate(estate, function(err, estate){
-        if(err) {
-            throw err;
-        }
-        else {
-            res.json(estate);
-        }
-    });
-});
+// app.post('/api/estates', (req, res) => {
+//     var estate = req.body;
+//     Estate.addEstate(estate, function(err, estate){
+//         if(err) {
+//             throw err;
+//         }
+//         else {
+//             res.json(estate);
+//         }
+//     });
+// });
 
 // Update Estate
 
 // Delete Estate /:id
-app.delete('/api/estates/:_id', (req, res) => {
-    var id = req.params._id;
-    Estate.deleteEstate(id, (err, estate) => {
-        if(err) {
-            throw err;
-        }
-        else {
-            res.json(estate);
-        }
-    });
-});
+// app.delete('/api/estates/:_id', (req, res) => {
+//     var id = req.params._id;
+//     Estate.deleteEstate(id, (err, estate) => {
+//         if(err) {
+//             throw err;
+//         }
+//         else {
+//             res.json(estate);
+//         }
+//     });
+// });
 
 // Server-side rendering module imports
 import path from 'path';
@@ -87,13 +92,13 @@ app.get('*', (req, res) => {
     } else if (renderProps) {
       let html = renderToString(<RouterContext {...renderProps} />);
       let googleMapsApiKey = config.googleMapsUrl;
-      res.status(200).send(template({body: html, googleMapsApiKey: googleMapsApiKey}));
+      res.status(200).send(template({body: html}));
     } else {
       res.status(400).send('Not found.')
     }
   });
 });
 
-// Local-dev listening
-const PORT = 3000;
+
+const PORT = 5000;
 app.listen(PORT, console.log('App ready: Listening on port' + PORT));

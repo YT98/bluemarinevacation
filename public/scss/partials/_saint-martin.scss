@@ -1,25 +1,28 @@
-.st-martin-container{
-  h1 {
-    color: $dark-blue;
-  }
-}
-
 .saint-martin-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), rgba(0,0,0,0.35) url('/public/img/saint-martin-background.jpg') no-repeat center;
+  background: linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.30)), url('/public/img/saint-martin-header.jpeg') no-repeat;
+  background-position: 50% 50%;
   background-size: cover;
-  height: 150px;
-  h1 {
-    color: #f49542;
-    margin-left: 15px;
+  height: 300px;
+  position: relative;
+  .title {
+    position: absolute;
+    left: 50px;
+    bottom: 50px;
+    color: white;
+    margin: 0;
+    margin-right: 50px;
+    h1 {
+      font-size: 60px;
+      margin: 0;
+    }
   }
 }
 
 .intro-st-martin {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  font-weight: light;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
 .map {
@@ -39,18 +42,96 @@
   }
 }
 
-.geographie {
-  margin-top: 30px;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.histoire {
-  @extend .geographie;
-}
-
 .investir {
+
+  h1 {
+    color: $dark-blue;
+  }
+
+  text-align: center;
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.geographie-container {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-image: url("/public/img/geographie.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+
+  div {
+    height: 100%;
+    background: linear-gradient(rgba(19, 85, 137, 0.55), rgba(19, 85, 137, 0.55)), rgba(19, 85, 137,0.35);
+  }
+
+  h1 {
+    padding-top: 50px;
+    margin-top: 0;
+    margin-left: 50px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    padding-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  button {
+      margin-left: 50px;
+      color: white;
+      background: none;
+      border: 1px solid white;
+      p {
+        padding: 5px;
+        margin: 0;
+      }
+      &:hover {
+        background-color: white;
+        color: $dark-blue;
+      }
+  }
+}
+
+.histoire-container {
+  @extend .geographie-container;
+  background-image: url("/public/img/histoire.jpg");
+}
+
+.activites-container {
+  @extend .geographie-container;
+  background-image: url("/public/img/activites.jpg");
+}
+
+.download {
+  display: block;
+  margin: auto;
+  background-color: $dark-blue;
+  margin-bottom: 50px;
+  color: white;
+  border: 1px solid $dark-blue;
+
+  i {
+    padding-right: 10px;
+  }
+
+  p {
+    margin: 0;
+    padding: 10px;
+  }
+
+  transition: padding 0.5s, background-color 0.25s, color 0.25s;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }

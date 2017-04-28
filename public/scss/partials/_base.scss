@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 //Colors:
 $dark-blue: #135589;
@@ -7,19 +8,14 @@ $light-blue: #AED9DA;
 $turquoise: #3DDAD7;
 $gray-blue: #EDFAFD;
 $dark-gray: #36454f;
-$light-gray: #D3D3D3;
+$light-gray: #d3d3d3;
 
 //Fonts:
-body {
+h1, h2, h3, h4, h5, h6 {
     font-family: lato;
 }
-
-//Title styling:
-.title-span-bold {
-    color: $dark-blue;
-    font-size: 40px;
-}
-.title-span-light {
-    font-weight: lighter;
-    font-size: 40px;
+p {
+  font-family: open-sans, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
 }

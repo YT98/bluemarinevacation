@@ -5,7 +5,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import Layout from './Layout';
 import Home from './routes/Home';
 import SaintMartin from './routes/SaintMartin';
-import Estates from './routes/Estates';
+import Investir from './routes/Investir';
 import Contact from './routes/Contact';
 
 
@@ -14,7 +14,7 @@ export default (
   <Route path="/" component={Layout}>
     <IndexRoute component={Home} />
       <Route path="/saint-martin" component={SaintMartin} />
-      <Route path="/estates" component={Estates} />
+      <Route path="/investir" component={Investir} />
       <Route path="/contact" component={Contact} />
   </Route>
 );

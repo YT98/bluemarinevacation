@@ -1,30 +1,54 @@
 .footer {
-  background-color: $dark-gray;
-  color: $light-gray;
+  background: linear-gradient(rgba(19, 85, 137, 0.75), rgba(19, 85, 137, 0.75)), url("/public/img/footer.jpg");
+  background-size: cover;
+  color: white;
   padding-bottom: 15px;
   padding-top: 15px;
+  text-align: center;
+
+  .links {
+    width: 800px;
+    margin: auto;
+    a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.25s;
+      &:hover {
+        color: $light-gray;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .social {
+    margin-bottom: 25px;
+    margin: auto;
+    i {
+      color: white;
+      transition: color 0.25s;
+      &:hover {
+        color: $light-gray;
+      }
+    }
+  }
+
+  i {
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
 
   p {
     font-size: 9px;
-    text-align: center;
     margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
   }
 }
 
-.footer-navigation {
-  display: flex;
-  justify-content: center;
-
-  h5 {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid $dark-gray;
-
-    &:hover {
-      border-bottom: 3px solid $light-gray;
+@media (max-width: 800px) {
+  .footer {
+    .links {
+      width: 100%;
     }
   }
 }
