@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 10);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -103,7 +103,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(1);
 
-var _classnames = __webpack_require__(18);
+var _classnames = __webpack_require__(17);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -247,22 +247,6 @@ exports.default = Navbar;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var config = {
-  googleMapsUrl: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCc4wGEx7lRphcJEyS2hdWetCXFbcg2GIQ&callback=initMap"
-};
-
-exports.default = config;
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 
 exports.default = function (_ref) {
   var body = _ref.body,
@@ -272,7 +256,7 @@ exports.default = function (_ref) {
 };
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -288,23 +272,23 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(1);
 
-var _Layout = __webpack_require__(12);
+var _Layout = __webpack_require__(11);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _Home = __webpack_require__(15);
+var _Home = __webpack_require__(14);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _SaintMartin = __webpack_require__(17);
+var _SaintMartin = __webpack_require__(16);
 
 var _SaintMartin2 = _interopRequireDefault(_SaintMartin);
 
-var _Investir = __webpack_require__(16);
+var _Investir = __webpack_require__(15);
 
 var _Investir2 = _interopRequireDefault(_Investir);
 
-var _Contact = __webpack_require__(14);
+var _Contact = __webpack_require__(13);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
@@ -323,45 +307,45 @@ exports.default = _react2.default.createElement(
 // Component importing
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = require("cool-ascii-faces");
 
 /***/ }),
-/* 8 */
+/* 7 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 9 */
+/* 8 */
 /***/ (function(module, exports) {
 
 module.exports = require("path");
 
 /***/ }),
-/* 10 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 11 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var _express = __webpack_require__(8);
+var _express = __webpack_require__(7);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _coolAsciiFaces = __webpack_require__(7);
+var _coolAsciiFaces = __webpack_require__(6);
 
 var _coolAsciiFaces2 = _interopRequireDefault(_coolAsciiFaces);
 
-var _path = __webpack_require__(9);
+var _path = __webpack_require__(8);
 
 var _path2 = _interopRequireDefault(_path);
 
@@ -369,21 +353,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(10);
+var _server = __webpack_require__(9);
 
 var _reactRouter = __webpack_require__(1);
 
-var _routes = __webpack_require__(6);
+var _routes = __webpack_require__(5);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _template = __webpack_require__(5);
+var _template = __webpack_require__(4);
 
 var _template2 = _interopRequireDefault(_template);
-
-var _config = __webpack_require__(4);
-
-var _config2 = _interopRequireDefault(_config);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -471,7 +451,6 @@ app.get('*', function (req, res) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search);
     } else if (renderProps) {
       var html = (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
-      var googleMapsApiKey = _config2.default.googleMapsUrl;
       res.status(200).send((0, _template2.default)({ body: html }));
     } else {
       res.status(400).send('Not found.');
@@ -483,7 +462,7 @@ var PORT = 5000;
 app.listen(PORT, console.log('App ready: Listening on port' + PORT));
 
 /***/ }),
-/* 12 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -499,7 +478,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(12);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -539,7 +518,7 @@ exports.default = Layout;
 ;
 
 /***/ }),
-/* 13 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -739,7 +718,7 @@ exports.default = Footer;
 ;
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1042,7 +1021,7 @@ exports.default = Contact;
 ;
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1344,7 +1323,7 @@ exports.default = Home;
 ;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1616,7 +1595,7 @@ exports.default = Investir;
 ;
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1865,7 +1844,7 @@ exports.default = SaintMartin;
 ;
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
