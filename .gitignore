@@ -1,5 +1,4 @@
 /node_modules
 /.sass-cache
 npm-debug.log
-/dist
 /src/server/config.js
