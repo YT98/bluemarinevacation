@@ -95,7 +95,7 @@ export default class Contact extends React.Component {
       let mail = mailTest ? '' : 'L\'addresse mail est invalide.'
       alert( "Il nous faut une addresse mail et un numéro de téléphone pour pouvoir vous recontacter!" + "\n" + phone + "\n" + mail)
     } else {
-      fetch('https://localhost:5000/sendmail', {
+      fetch('https://www.holidayhomes7.com/sendmail', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

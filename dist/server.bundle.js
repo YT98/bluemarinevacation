@@ -1301,7 +1301,7 @@ var Contact = function (_React$Component) {
         var mail = mailTest ? '' : 'L\'addresse mail est invalide.';
         alert("Il nous faut une addresse mail et un numéro de téléphone pour pouvoir vous recontacter!" + "\n" + phone + "\n" + mail);
       } else {
-        fetch('https://localhost:5000/sendmail', {
+        fetch('https://www.holidayhomes7.com/sendmail', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -2338,7 +2338,7 @@ var EnContact = function (_React$Component) {
         var mail = mailTest ? '' : 'The e-mail address you provided is invalid.';
         alert("We need your e-mail address and phone number to be able to contact you back!" + "\n" + phone + "\n" + mail);
       } else {
-        fetch('https://localhost:5000/sendmail', {
+        fetch('https://www.holidayhomes7.com/sendmail', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
