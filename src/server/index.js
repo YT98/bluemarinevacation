@@ -31,7 +31,7 @@ app.post('/sendmail', function (req, res) {
 
   transporter.sendMail({
     from: config.username,
-    to: config.username,
+    to: config.sendAddr,
     subject: 'Formulaire holidayhomes7.com',
     text : text
   }, function(error, response){
