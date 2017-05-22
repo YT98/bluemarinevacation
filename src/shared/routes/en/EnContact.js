@@ -94,7 +94,7 @@ export default class EnContact extends React.Component {
       let mail = mailTest ? '' : 'The e-mail address you provided is invalid.'
       alert( "We need your e-mail address and phone number to be able to contact you back!" + "\n" + phone + "\n" + mail)
     } else {
-      fetch('http://localhost:5000/sendmail', {
+      fetch('https://localhost:5000/sendmail', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

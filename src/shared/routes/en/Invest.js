@@ -79,8 +79,8 @@ export default class Invest extends React.Component {
           </div>
         </div>
 
-        <button class="facebook"> <h4> <a target="__blank" href="https://www.facebook.com/homesevensxm/"> Consult the other propreties we are selling on our Facebook page. </a> <i class="fa fa-facebook-official"></i> </h4> </button>
-        <button class="airbnb"> <h5> <a target="__blank" href="https://fr.airbnb.ca/s?host_id=96977877&s_tag=A7DvdiEZ&allow_override%5B%5D="> Consult our propreties for rent on Airbnb. </a>  </h5> </button>
+        <button class="facebook"> <h4> <a target="__blank" href="https://facebook.com/holidayhomeseven/"> Consult the other propreties we are selling on our Facebook page. </a> <i class="fa fa-facebook-official"></i> </h4> </button>
+        <button class="airbnb"> <h5> <a target="__blank" href="https://airbnb.ca/s?host_id=96977877&s_tag=A7DvdiEZ&allow_override%5B%5D="> Consult our propreties for rent on Airbnb. </a>  </h5> </button>
 
         <Footer path={this.props.location.pathname} />
       </div>

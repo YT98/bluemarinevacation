@@ -79,7 +79,7 @@ export default class Investir extends React.Component {
           </div>
         </div>
 
-        <button class="facebook"> <h4> <a target="__blank" href="https://www.facebook.com/homesevensxm/"> Consultez plus de propriétés à vendre sur Facebook. </a> <i class="fa fa-facebook-official"></i> </h4> </button>
+        <button class="facebook"> <h4> <a target="__blank" href="https://facebook.com/holidayhomeseven/"> Consultez plus de propriétés à vendre sur Facebook. </a> <i class="fa fa-facebook-official"></i> </h4> </button>
         <button class="airbnb"> <h5> <a target="__blank" href="https://fr.airbnb.ca/s?host_id=96977877&s_tag=A7DvdiEZ&allow_override%5B%5D="> Consultez nos propriétés à louer sur Airbnb </a>  </h5> </button>
 
         <Footer path={this.props.location.pathname} />
