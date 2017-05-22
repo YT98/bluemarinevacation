@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -74,18 +74,6 @@ module.exports = require("react");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-motion");
-
-/***/ }),
-/* 2 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-router");
-
-/***/ }),
-/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -101,488 +89,9 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRouter = __webpack_require__(2);
+var _reactRouter = __webpack_require__(4);
 
-var _classnames = __webpack_require__(20);
-
-var _classnames2 = _interopRequireDefault(_classnames);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Navbar = function (_React$Component) {
-  _inherits(Navbar, _React$Component);
-
-  function Navbar(props) {
-    _classCallCheck(this, Navbar);
-
-    var _this = _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).call(this, props));
-
-    _this.state = {
-      redirect: '',
-      en: false,
-      langButton: '',
-      isHome: false,
-      isStMartin: false,
-      isInvestir: false,
-      isContact: false
-    };
-    _this.handleLang = _this.handleLang.bind(_this);
-    _this.handlePath = _this.handlePath.bind(_this);
-    return _this;
-  }
-
-  _createClass(Navbar, [{
-    key: 'handleLang',
-    value: function handleLang() {
-      if (this.state.en === true) {
-        this.setState({ langButton: 'Français' });
-      } else if (this.state.en === false) {
-        this.setState({ langButton: 'English' });
-      }
-    }
-  }, {
-    key: 'handlePath',
-    value: function handlePath() {
-      var path = this.props.path;
-      if (path == "/") {
-        this.setState({ redirect: "/en", en: false, isHome: true, isStMartin: false, isInvestir: false, isContact: false });
-      } else if (path == "/saint-martin") {
-        this.setState({ redirect: "/en/st-marteen", en: false, isHome: false, isStMartin: true, isInvestir: false, isContact: false });
-      } else if (path == "/investir") {
-        this.setState({ redirect: "/en/invest", en: false, isHome: false, isStMartin: false, isInvestir: true, isContact: false });
-      } else if (path == "/contact") {
-        this.setState({ redirect: "/en/contact", en: false, isHome: false, isStMartin: false, isInvestir: false, isContact: true });
-      }
-      if (path == "/en") {
-        this.setState({ redirect: "/", en: true, isHome: true, isStMartin: false, isInvestir: false, isContact: false });
-      } else if (path == "/en/st-marteen") {
-        this.setState({ redirect: "/saint-martin", en: true, isHome: false, isStMartin: true, isInvestir: false, isContact: false });
-      } else if (path == "/en/invest") {
-        this.setState({ redirect: "/investir", en: true, isHome: false, isStMartin: false, isInvestir: true, isContact: false });
-      } else if (path == "/en/contact") {
-        this.setState({ redirect: "/contact", en: true, isHome: false, isStMartin: false, isInvestir: false, isContact: true });
-      }
-    }
-  }, {
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      this.handlePath();
-      this.handleLang();
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.handleLang();
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-
-      return _react2.default.createElement(
-        'div',
-        { id: 'navbar' },
-        _react2.default.createElement(
-          'nav',
-          { className: 'navbar navbar-new', role: 'navigation' },
-          _react2.default.createElement(
-            'div',
-            { className: 'container-fluid' },
-            _react2.default.createElement(
-              'div',
-              { className: 'navbar-header' },
-              _react2.default.createElement(
-                'button',
-                { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#navbar1' },
-                _react2.default.createElement(
-                  'span',
-                  { className: 'sr-only' },
-                  'Toggle navigation'
-                ),
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' }),
-                _react2.default.createElement('span', { className: 'icon-bar' })
-              ),
-              _react2.default.createElement(
-                'a',
-                { href: '#' },
-                _react2.default.createElement('img', { className: 'nav-logo', src: '/public/img/navbar-logo.png' })
-              )
-            ),
-            _react2.default.createElement(
-              'div',
-              { className: 'collapse navbar-collapse navbar-right', id: 'navbar1' },
-              _react2.default.createElement(
-                'ul',
-                { className: 'nav navbar-nav' },
-                _react2.default.createElement(
-                  'li',
-                  { className: this.state.isHome ? 'active' : '' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: this.state.en ? "/en" : "/" },
-                    this.state.en ? "Home" : "Accueil"
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: this.state.isStMartin ? 'active' : '' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: this.state.en ? "/en/st-marteen" : "/saint-martin" },
-                    this.state.en ? "St-Marteen" : "Saint-Martin"
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: this.state.isInvestir ? 'active' : '' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: this.state.en ? "/en/invest" : "/investir" },
-                    this.state.en ? "Invest" : "Investir"
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  { className: this.state.isContact ? 'active' : '' },
-                  _react2.default.createElement(
-                    _reactRouter.Link,
-                    { to: this.state.en ? "/en/contact" : "/contact" },
-                    'Contact'
-                  )
-                ),
-                _react2.default.createElement(
-                  'li',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'a',
-                    { className: 'lang', href: this.state.redirect },
-                    ' ',
-                    this.state.langButton,
-                    ' '
-                  ),
-                  ' '
-                )
-              )
-            )
-          )
-        )
-      );
-    }
-  }]);
-
-  return Navbar;
-}(_react2.default.Component);
-
-exports.default = Navbar;
-;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-exports.default = function (_ref) {
-  var body = _ref.body,
-      lang = _ref.lang;
-
-  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>Holiday Homes 7 | Investissements immobiliers </title>\n        <meta name=\"description\" content=\"Vente de proprietes a St-Martin, St-Marteen et St-Barth.\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />\n        <script src=\"https://use.fontawesome.com/0cee7cce00.js\"></script>\n        <link rel=\"icon\" type=\"image/png\" href=\"/public/img/favicon.ico\">\n        <link rel=\"stylesheet\" href=\"/public/style.css\" />\n      </head>\n\n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n\n      <script src=\"/dist/client/client.bundle.js\"></script>\n      <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>\n      <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n    </html>\n  ";
-};
-
-/***/ }),
-/* 5 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(2);
-
-var _Layout = __webpack_require__(12);
-
-var _Layout2 = _interopRequireDefault(_Layout);
-
-var _Accueil = __webpack_require__(24);
-
-var _Accueil2 = _interopRequireDefault(_Accueil);
-
-var _SaintMartin = __webpack_require__(17);
-
-var _SaintMartin2 = _interopRequireDefault(_SaintMartin);
-
-var _Investir = __webpack_require__(16);
-
-var _Investir2 = _interopRequireDefault(_Investir);
-
-var _Contact = __webpack_require__(14);
-
-var _Contact2 = _interopRequireDefault(_Contact);
-
-var _Home = __webpack_require__(25);
-
-var _Home2 = _interopRequireDefault(_Home);
-
-var _StMarteen = __webpack_require__(27);
-
-var _StMarteen2 = _interopRequireDefault(_StMarteen);
-
-var _Invest = __webpack_require__(26);
-
-var _Invest2 = _interopRequireDefault(_Invest);
-
-var _EnContact = __webpack_require__(21);
-
-var _EnContact2 = _interopRequireDefault(_EnContact);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-// Routes
-exports.default = _react2.default.createElement(
-  _reactRouter.Route,
-  { path: '/', component: _Layout2.default },
-  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Accueil2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/saint-martin', component: _SaintMartin2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/investir', component: _Investir2.default }),
-  _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default }),
-  _react2.default.createElement(
-    _reactRouter.Route,
-    { path: 'en' },
-    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: 'st-marteen', component: _StMarteen2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: 'invest', component: _Invest2.default }),
-    _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _EnContact2.default })
-  )
-);
-
-// Component importing
-
-/***/ }),
-/* 6 */
-/***/ (function(module, exports) {
-
-module.exports = require("express");
-
-/***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */
-/***/ (function(module, exports) {
-
-module.exports = require("path");
-
-/***/ }),
-/* 10 */
-/***/ (function(module, exports) {
-
-module.exports = require("react-dom/server");
-
-/***/ }),
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _express = __webpack_require__(6);
-
-var _express2 = _interopRequireDefault(_express);
-
-var _config = __webpack_require__(28);
-
-var _config2 = _interopRequireDefault(_config);
-
-var _nodemailer = __webpack_require__(30);
-
-var _nodemailer2 = _interopRequireDefault(_nodemailer);
-
-var _bodyParser = __webpack_require__(29);
-
-var _bodyParser2 = _interopRequireDefault(_bodyParser);
-
-var _path = __webpack_require__(9);
-
-var _path2 = _interopRequireDefault(_path);
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _server = __webpack_require__(10);
-
-var _reactRouter = __webpack_require__(2);
-
-var _routes = __webpack_require__(5);
-
-var _routes2 = _interopRequireDefault(_routes);
-
-var _template = __webpack_require__(4);
-
-var _template2 = _interopRequireDefault(_template);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var app = (0, _express2.default)();
-
-// Nodemailer
-// Express app init
-
-
-var transporter = _nodemailer2.default.createTransport({
-  service: _config2.default.service,
-  auth: {
-    user: _config2.default.username,
-    pass: _config2.default.password
-  }
-});
-
-// REST API
-app.use(_bodyParser2.default.json());
-
-app.post('/sendmail', function (req, res) {
-
-  function sprintf(template, values) {
-    return template.replace(/%s/g, function () {
-      return values.shift();
-    });
-  }
-  var text = sprintf('Nom: %s \nAddresse mail: %s \nNuméro de téléphone: %s \nService désiré: %s \nInformation additionelle: %s \nLangue: %s', [req.body.name, req.body.mail, req.body.phone, req.body.services, req.body.info, req.body.lang]);
-
-  transporter.sendMail({
-    from: _config2.default.username,
-    to: _config2.default.username,
-    subject: 'Formulaire holidayhomes7.com',
-    text: text
-  }, function (error, response) {
-    if (error) {
-      res.status(500);
-    } else {
-      res.status(200);
-    }
-  });
-});
-
-// Server-side rendering module imports
-
-
-//  Server-side rendering
-app.use('/dist/client', _express2.default.static(__dirname + '/client'));
-app.use('/public', _express2.default.static(__dirname + '/../public'));
-
-app.get('*', function (req, res) {
-  (0, _reactRouter.match)({ routes: _routes2.default, location: req.url }, function (error, redirectLocation, renderProps) {
-    if (error) {
-      res.status(500).send(error.message);
-    } else if (redirectLocation) {
-      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
-    } else if (renderProps) {
-      var lang = req.language;
-      var html = (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
-      res.status(200).send((0, _template2.default)({ body: html, lang: lang }));
-    } else {
-      res.status(400).send('Not found.');
-    }
-  });
-});
-
-//
-var PORT = 5000;
-app.listen(PORT, console.log('App ready: Listening on port' + PORT));
-
-/***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Footer = __webpack_require__(13);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Layout = function (_React$Component) {
-  _inherits(Layout, _React$Component);
-
-  function Layout() {
-    _classCallCheck(this, Layout);
-
-    return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
-  }
-
-  _createClass(Layout, [{
-    key: 'render',
-    value: function render() {
-      return _react2.default.createElement(
-        'div',
-        null,
-        this.props.children
-      );
-    }
-  }]);
-
-  return Layout;
-}(_react2.default.Component);
-
-exports.default = Layout;
-;
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _reactRouter = __webpack_require__(2);
-
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -815,6 +324,468 @@ exports.default = Footer;
 ;
 
 /***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-motion");
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(4);
+
+var _classnames = __webpack_require__(23);
+
+var _classnames2 = _interopRequireDefault(_classnames);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Navbar = function (_React$Component) {
+  _inherits(Navbar, _React$Component);
+
+  function Navbar(props) {
+    _classCallCheck(this, Navbar);
+
+    var _this = _possibleConstructorReturn(this, (Navbar.__proto__ || Object.getPrototypeOf(Navbar)).call(this, props));
+
+    _this.state = {
+      redirect: '',
+      en: false,
+      langButton: '',
+      isHome: false,
+      isStMartin: false,
+      isInvestir: false,
+      isContact: false
+    };
+    _this.handleLang = _this.handleLang.bind(_this);
+    _this.handlePath = _this.handlePath.bind(_this);
+    return _this;
+  }
+
+  _createClass(Navbar, [{
+    key: 'handleLang',
+    value: function handleLang() {
+      if (this.state.en === true) {
+        this.setState({ langButton: 'Français' });
+      } else if (this.state.en === false) {
+        this.setState({ langButton: 'English' });
+      }
+    }
+  }, {
+    key: 'handlePath',
+    value: function handlePath() {
+      var path = this.props.path;
+      if (path == "/") {
+        this.setState({ redirect: "/en", en: false, isHome: true, isStMartin: false, isInvestir: false, isContact: false });
+      } else if (path == "/saint-martin") {
+        this.setState({ redirect: "/en/st-marteen", en: false, isHome: false, isStMartin: true, isInvestir: false, isContact: false });
+      } else if (path == "/investir") {
+        this.setState({ redirect: "/en/invest", en: false, isHome: false, isStMartin: false, isInvestir: true, isContact: false });
+      } else if (path == "/contact") {
+        this.setState({ redirect: "/en/contact", en: false, isHome: false, isStMartin: false, isInvestir: false, isContact: true });
+      }
+      if (path == "/en") {
+        this.setState({ redirect: "/", en: true, isHome: true, isStMartin: false, isInvestir: false, isContact: false });
+      } else if (path == "/en/st-marteen") {
+        this.setState({ redirect: "/saint-martin", en: true, isHome: false, isStMartin: true, isInvestir: false, isContact: false });
+      } else if (path == "/en/invest") {
+        this.setState({ redirect: "/investir", en: true, isHome: false, isStMartin: false, isInvestir: true, isContact: false });
+      } else if (path == "/en/contact") {
+        this.setState({ redirect: "/contact", en: true, isHome: false, isStMartin: false, isInvestir: false, isContact: true });
+      }
+    }
+  }, {
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.handlePath();
+      this.handleLang();
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.handleLang();
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+
+      return _react2.default.createElement(
+        'div',
+        { id: 'navbar' },
+        _react2.default.createElement(
+          'nav',
+          { className: 'navbar navbar-new', role: 'navigation' },
+          _react2.default.createElement(
+            'div',
+            { className: 'container-fluid' },
+            _react2.default.createElement(
+              'div',
+              { className: 'navbar-header' },
+              _react2.default.createElement(
+                'button',
+                { type: 'button', className: 'navbar-toggle', 'data-toggle': 'collapse', 'data-target': '#navbar1' },
+                _react2.default.createElement(
+                  'span',
+                  { className: 'sr-only' },
+                  'Toggle navigation'
+                ),
+                _react2.default.createElement('span', { className: 'icon-bar' }),
+                _react2.default.createElement('span', { className: 'icon-bar' }),
+                _react2.default.createElement('span', { className: 'icon-bar' })
+              ),
+              _react2.default.createElement(
+                'a',
+                { href: '#' },
+                _react2.default.createElement('img', { className: 'nav-logo', src: '/public/img/navbar-logo.png' })
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'collapse navbar-collapse navbar-right', id: 'navbar1' },
+              _react2.default.createElement(
+                'ul',
+                { className: 'nav navbar-nav' },
+                _react2.default.createElement(
+                  'li',
+                  { className: this.state.isHome ? 'active' : '' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: this.state.en ? "/en" : "/" },
+                    this.state.en ? "Home" : "Accueil"
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  { className: this.state.isStMartin ? 'active' : '' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: this.state.en ? "/en/st-marteen" : "/saint-martin" },
+                    this.state.en ? "St-Marteen" : "Saint-Martin"
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  { className: this.state.isInvestir ? 'active' : '' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: this.state.en ? "/en/invest" : "/investir" },
+                    this.state.en ? "Invest" : "Investir"
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  { className: this.state.isContact ? 'active' : '' },
+                  _react2.default.createElement(
+                    _reactRouter.Link,
+                    { to: this.state.en ? "/en/contact" : "/contact" },
+                    'Contact'
+                  )
+                ),
+                _react2.default.createElement(
+                  'li',
+                  null,
+                  ' ',
+                  _react2.default.createElement(
+                    'a',
+                    { className: 'lang', href: this.state.redirect },
+                    ' ',
+                    this.state.langButton,
+                    ' '
+                  ),
+                  ' '
+                )
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return Navbar;
+}(_react2.default.Component);
+
+exports.default = Navbar;
+;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-router");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var config = {};
+
+config.service = 'Gmail';
+config.username = 'tarfadesign@gmail.com';
+config.password = 'Mangaka2';
+config.sendAddr = 'caucheferpaulinepro@gmail.com';
+
+module.exports = config;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+exports.default = function (_ref) {
+  var body = _ref.body,
+      lang = _ref.lang;
+
+  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>Holiday Homes 7 | Investissements immobiliers </title>\n        <meta name=\"description\" content=\"Vente de proprietes a St-Martin, St-Marteen et St-Barth.\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />\n        <script src=\"https://use.fontawesome.com/0cee7cce00.js\"></script>\n        <link rel=\"icon\" type=\"image/png\" href=\"/public/img/favicon.ico\">\n        <link rel=\"stylesheet\" href=\"/public/style.css\" />\n      </head>\n\n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n\n      <script src=\"/dist/client/client.bundle.js\"></script>\n      <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>\n      <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n    </html>\n  ";
+};
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = __webpack_require__(4);
+
+var _Layout = __webpack_require__(14);
+
+var _Layout2 = _interopRequireDefault(_Layout);
+
+var _Accueil = __webpack_require__(15);
+
+var _Accueil2 = _interopRequireDefault(_Accueil);
+
+var _SaintMartin = __webpack_require__(18);
+
+var _SaintMartin2 = _interopRequireDefault(_SaintMartin);
+
+var _Investir = __webpack_require__(17);
+
+var _Investir2 = _interopRequireDefault(_Investir);
+
+var _Contact = __webpack_require__(16);
+
+var _Contact2 = _interopRequireDefault(_Contact);
+
+var _Home = __webpack_require__(20);
+
+var _Home2 = _interopRequireDefault(_Home);
+
+var _StMarteen = __webpack_require__(22);
+
+var _StMarteen2 = _interopRequireDefault(_StMarteen);
+
+var _Invest = __webpack_require__(21);
+
+var _Invest2 = _interopRequireDefault(_Invest);
+
+var _EnContact = __webpack_require__(19);
+
+var _EnContact2 = _interopRequireDefault(_EnContact);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Routes
+exports.default = _react2.default.createElement(
+  _reactRouter.Route,
+  { path: '/', component: _Layout2.default },
+  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Accueil2.default }),
+  _react2.default.createElement(_reactRouter.Route, { path: '/saint-martin', component: _SaintMartin2.default }),
+  _react2.default.createElement(_reactRouter.Route, { path: '/investir', component: _Investir2.default }),
+  _react2.default.createElement(_reactRouter.Route, { path: '/contact', component: _Contact2.default }),
+  _react2.default.createElement(
+    _reactRouter.Route,
+    { path: 'en' },
+    _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'st-marteen', component: _StMarteen2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'invest', component: _Invest2.default }),
+    _react2.default.createElement(_reactRouter.Route, { path: 'contact', component: _EnContact2.default })
+  )
+);
+
+// Component importing
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("body-parser");
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("express");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("nodemailer");
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom/server");
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _express = __webpack_require__(9);
+
+var _express2 = _interopRequireDefault(_express);
+
+var _config = __webpack_require__(5);
+
+var _config2 = _interopRequireDefault(_config);
+
+var _nodemailer = __webpack_require__(10);
+
+var _nodemailer2 = _interopRequireDefault(_nodemailer);
+
+var _bodyParser = __webpack_require__(8);
+
+var _bodyParser2 = _interopRequireDefault(_bodyParser);
+
+var _path = __webpack_require__(11);
+
+var _path2 = _interopRequireDefault(_path);
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _server = __webpack_require__(12);
+
+var _reactRouter = __webpack_require__(4);
+
+var _routes = __webpack_require__(7);
+
+var _routes2 = _interopRequireDefault(_routes);
+
+var _template = __webpack_require__(6);
+
+var _template2 = _interopRequireDefault(_template);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var app = (0, _express2.default)();
+
+// Nodemailer
+// Express app init
+
+
+var transporter = _nodemailer2.default.createTransport({
+  service: _config2.default.service,
+  auth: {
+    user: _config2.default.username,
+    pass: _config2.default.password
+  }
+});
+
+// REST API
+app.use(_bodyParser2.default.json());
+
+app.post('/sendmail', function (req, res) {
+
+  function sprintf(template, values) {
+    return template.replace(/%s/g, function () {
+      return values.shift();
+    });
+  }
+  var text = sprintf('Nom: %s \nAddresse mail: %s \nNuméro de téléphone: %s \nService désiré: %s \nInformation additionelle: %s \nLangue: %s', [req.body.name, req.body.mail, req.body.phone, req.body.services, req.body.info, req.body.lang]);
+
+  transporter.sendMail({
+    from: _config2.default.username,
+    to: _config2.default.sendAddr,
+    subject: 'Formulaire holidayhomes7.com',
+    text: text
+  }, function (error, response) {
+    if (error) {
+      res.status(500);
+    } else {
+      res.status(200);
+    }
+  });
+});
+
+// Server-side rendering module imports
+
+
+//  Server-side rendering
+app.use('/dist/client', _express2.default.static(__dirname + '/client'));
+app.use('/public', _express2.default.static(__dirname + '/../public'));
+
+app.get('*', function (req, res) {
+  (0, _reactRouter.match)({ routes: _routes2.default, location: req.url }, function (error, redirectLocation, renderProps) {
+    if (error) {
+      res.status(500).send(error.message);
+    } else if (redirectLocation) {
+      res.redirect(302, redirectLocation.pathname + redirectLocation.search);
+    } else if (renderProps) {
+      var lang = req.language;
+      var html = (0, _server.renderToString)(_react2.default.createElement(_reactRouter.RouterContext, renderProps));
+      res.status(200).send((0, _template2.default)({ body: html, lang: lang }));
+    } else {
+      res.status(400).send('Not found.');
+    }
+  });
+});
+
+//
+var PORT = 5000;
+app.listen(PORT, console.log('App ready: Listening on port' + PORT));
+
+/***/ }),
 /* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -831,17 +802,379 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactMotion = __webpack_require__(1);
+var _Footer = __webpack_require__(1);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Layout = function (_React$Component) {
+  _inherits(Layout, _React$Component);
+
+  function Layout() {
+    _classCallCheck(this, Layout);
+
+    return _possibleConstructorReturn(this, (Layout.__proto__ || Object.getPrototypeOf(Layout)).apply(this, arguments));
+  }
+
+  _createClass(Layout, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        this.props.children
+      );
+    }
+  }]);
+
+  return Layout;
+}(_react2.default.Component);
+
+exports.default = Layout;
+;
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
 
 var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(31);
+var _reactRouter = __webpack_require__(4);
+
+var _reactMotion = __webpack_require__(2);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Accueil = function (_React$Component) {
+  _inherits(Accueil, _React$Component);
+
+  function Accueil(props) {
+    _classCallCheck(this, Accueil);
+
+    var _this = _possibleConstructorReturn(this, (Accueil.__proto__ || Object.getPrototypeOf(Accueil)).call(this, props));
+
+    _this.state = {
+      introToggle: false,
+      stMartinToggle: false,
+      investirToggle: false
+    };
+    _this.onClick = _this.onClick.bind(_this);
+    _this.handleIntroAnimation = _this.handleIntroAnimation.bind(_this);
+    _this.handleScroll = _this.handleScroll.bind(_this);
+    return _this;
+  }
+
+  _createClass(Accueil, [{
+    key: 'onClick',
+    value: function onClick() {
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }
+  }, {
+    key: 'handleScroll',
+    value: function handleScroll() {
+      var stMartinTop = document.getElementById("home-st-martin").getBoundingClientRect().top;
+      if (stMartinTop < 500) {
+        this.setState({ stMartinToggle: true });
+      };
+      var investirTop = document.getElementById("home-investir").getBoundingClientRect().top;
+      if (investirTop < 495) {
+        this.setState({ investirToggle: true });
+      }
+    }
+  }, {
+    key: 'handleIntroAnimation',
+    value: function handleIntroAnimation() {
+      this.setState({ introToggle: true });
+    }
+  }, {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      this.handleIntroAnimation();
+      window.addEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'componentWillUnmount',
+    value: function componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'parent-divs' },
+        _react2.default.createElement(
+          'div',
+          { className: 'home-header' },
+          _react2.default.createElement(_Navbar2.default, { path: this.props.location.pathname }),
+          _react2.default.createElement(
+            'div',
+            { className: 'video-container' },
+            _react2.default.createElement('video', { className: 'video-background', autoPlay: true, muted: true, loop: true, preload: 'auto', src: '/public/img/video.mp4' })
+          ),
+          _react2.default.createElement(
+            _reactMotion.Motion,
+            { style: { p: (0, _reactMotion.spring)(this.state.introToggle ? 0 : 1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.introToggle ? 1 : 0, { stiffness: 30, damping: 33 }) } },
+            function (_ref) {
+              var p = _ref.p,
+                  o = _ref.o;
+              return _react2.default.createElement(
+                'div',
+                { className: 'home-header-title', style: { transform: 'translateY(' + p + 'px)' } },
+                _react2.default.createElement(
+                  'div',
+                  null,
+                  _react2.default.createElement(
+                    'h1',
+                    { style: { opacity: '' + o } },
+                    ' Holiday Homes 7 '
+                  )
+                )
+              );
+            }
+          )
+        ),
+        _react2.default.createElement(
+          _reactMotion.Motion,
+          { style: { p: (0, _reactMotion.spring)(this.state.introToggle ? 0 : -1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.introToggle ? 1 : 0, { stiffness: 30, damping: 26 }) } },
+          function (_ref2) {
+            var p = _ref2.p,
+                o = _ref2.o;
+            return _react2.default.createElement(
+              'div',
+              { className: 'row home-intro' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-4 col-sm-4' },
+                _react2.default.createElement(
+                  'h2',
+                  { style: { transform: 'translateX(' + p + 'px)', opacity: '' + o } },
+                  ' ',
+                  _react2.default.createElement(
+                    'strong',
+                    { style: { color: "#135589" } },
+                    'Profitez'
+                  ),
+                  ' ',
+                  _react2.default.createElement('br', null),
+                  ' de Saint-Martin. '
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-8 col-sm-8' },
+                _react2.default.createElement(
+                  'p',
+                  { style: { transform: 'translateX(' + -p + 'px)', opacity: '' + o } },
+                  ' Nous sommes Holiday Homes 7, une entreprise d\u2019investissements immobiliers. Situ\xE9s \xE0 St-Martin, nous sommes en mesure de vous procurer villas et appartements, terrains et locaux de qualit\xE9 dans le d\xE9cor de r\xEAve qu\u2019est cette merveilleuse \xEEle: collines verdoyantes, plages de sable fin, eau turquoise \xE0 perte de vue\u2026 St-Martin ne manque pas de facettes \xE0 d\xE9couvrir !'
+                )
+              )
+            );
+          }
+        ),
+        _react2.default.createElement(
+          _reactMotion.Motion,
+          { style: { p: (0, _reactMotion.spring)(this.state.stMartinToggle ? 0 : -1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.stMartinToggle ? 1 : 0, { stiffness: 30, damping: 26 }), s: (0, _reactMotion.spring)(this.state.stMartinToggle ? 1 : 1.5, { stiffness: 30, damping: 26 }) } },
+          function (_ref3) {
+            var p = _ref3.p,
+                o = _ref3.o,
+                s = _ref3.s;
+            return _react2.default.createElement(
+              'div',
+              { className: 'row home-st-martin', id: 'home-st-martin' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-sm-6' },
+                _react2.default.createElement(
+                  'div',
+                  { className: 'home-st-martin-img' },
+                  _react2.default.createElement('div', { style: { transform: 'scale(' + s + ')' } })
+                )
+              ),
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-sm-6', style: { transform: 'translateX(' + -p + 'px)', opacity: '' + o } },
+                _react2.default.createElement(
+                  'h1',
+                  null,
+                  ' ',
+                  _react2.default.createElement(
+                    'strong',
+                    { style: { color: "#135589" } },
+                    ' D\xE9couvrez '
+                  ),
+                  ' ',
+                  _react2.default.createElement('br', null),
+                  ' Saint-Martin, ',
+                  _react2.default.createElement('br', null),
+                  ' la friendly island. '
+                ),
+                _react2.default.createElement(
+                  'button',
+                  null,
+                  ' ',
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    ' ',
+                    _react2.default.createElement(
+                      _reactRouter.Link,
+                      { to: '/saint-martin', onClick: _this2.onClick },
+                      ' Pour en apprendre plus sur Saint-Martin '
+                    ),
+                    ' '
+                  ),
+                  ' '
+                )
+              )
+            );
+          }
+        ),
+        _react2.default.createElement(
+          _reactMotion.Motion,
+          { style: { p: (0, _reactMotion.spring)(this.state.investirToggle ? 0 : -1000, { stiffness: 100, damping: 33 }), o: (0, _reactMotion.spring)(this.state.investirToggle ? 1 : 0, { stiffness: 30, damping: 26 }) } },
+          function (_ref4) {
+            var p = _ref4.p,
+                o = _ref4.o;
+            return _react2.default.createElement(
+              'div',
+              { className: 'row home-estates', id: 'home-investir' },
+              _react2.default.createElement(
+                'div',
+                { className: 'col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 sol-xs-12', style: { transform: 'translateX(' + -p + 'px)' } },
+                _react2.default.createElement(
+                  'h1',
+                  { style: { opacity: '' + o } },
+                  ' ',
+                  _react2.default.createElement(
+                    'strong',
+                    null,
+                    ' Investissez '
+                  ),
+                  ' ',
+                  _react2.default.createElement('br', null),
+                  ' dans un petit bout ',
+                  _react2.default.createElement('br', null),
+                  ' de paradis.'
+                ),
+                _react2.default.createElement(
+                  'button',
+                  { style: { opacity: '' + o } },
+                  ' ',
+                  _react2.default.createElement(
+                    'p',
+                    null,
+                    ' ',
+                    _react2.default.createElement(
+                      _reactRouter.Link,
+                      { to: '/investir', onClick: _this2.onClick },
+                      ' Consultez nos propri\xE9t\xE9s ! '
+                    ),
+                    ' '
+                  )
+                )
+              )
+            );
+          }
+        ),
+        _react2.default.createElement(
+          'div',
+          { className: 'row home-contact' },
+          _react2.default.createElement(
+            'button',
+            null,
+            ' ',
+            _react2.default.createElement(
+              'h1',
+              null,
+              ' ',
+              _react2.default.createElement(
+                _reactRouter.Link,
+                { to: '/contact', onClick: this.onClick },
+                ' Contactez-nous ! '
+              ),
+              ' '
+            ),
+            ' '
+          )
+        ),
+        _react2.default.createElement(_Footer2.default, { path: this.props.location.pathname })
+      );
+    }
+  }]);
+
+  return Accueil;
+}(_react2.default.Component);
+
+exports.default = Accueil;
+;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactMotion = __webpack_require__(2);
+
+var _Navbar = __webpack_require__(3);
+
+var _Navbar2 = _interopRequireDefault(_Navbar);
+
+var _Footer = __webpack_require__(1);
+
+var _Footer2 = _interopRequireDefault(_Footer);
+
+__webpack_require__(24);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -968,7 +1301,7 @@ var Contact = function (_React$Component) {
         var mail = mailTest ? '' : 'L\'addresse mail est invalide.';
         alert("Il nous faut une addresse mail et un numéro de téléphone pour pouvoir vous recontacter!" + "\n" + phone + "\n" + mail);
       } else {
-        fetch('http://localhost:5000/sendmail', {
+        fetch('https://localhost:5000/sendmail', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -1245,8 +1578,7 @@ exports.default = Contact;
 ;
 
 /***/ }),
-/* 15 */,
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1266,11 +1598,11 @@ var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1563,7 +1895,7 @@ var Investir = function (_React$Component) {
             ' ',
             _react2.default.createElement(
               'a',
-              { target: '__blank', href: 'https://www.facebook.com/homesevensxm/' },
+              { target: '__blank', href: 'https://facebook.com/holidayhomeseven/' },
               ' Consultez plus de propri\xE9t\xE9s \xE0 vendre sur Facebook. '
             ),
             ' ',
@@ -1601,7 +1933,7 @@ exports.default = Investir;
 ;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1621,11 +1953,11 @@ var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1855,15 +2187,7 @@ exports.default = SaintMartin;
 ;
 
 /***/ }),
-/* 18 */,
-/* 19 */,
-/* 20 */
-/***/ (function(module, exports) {
-
-module.exports = require("classnames");
-
-/***/ }),
-/* 21 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1879,13 +2203,13 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -2014,7 +2338,7 @@ var EnContact = function (_React$Component) {
         var mail = mailTest ? '' : 'The e-mail address you provided is invalid.';
         alert("We need your e-mail address and phone number to be able to contact you back!" + "\n" + phone + "\n" + mail);
       } else {
-        fetch('http://localhost:5000/sendmail', {
+        fetch('https://localhost:5000/sendmail', {
           method: 'POST',
           headers: {
             'Accept': 'application/json',
@@ -2291,9 +2615,7 @@ exports.default = EnContact;
 ;
 
 /***/ }),
-/* 22 */,
-/* 23 */,
-/* 24 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2313,320 +2635,13 @@ var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _reactRouter = __webpack_require__(2);
+var _reactRouter = __webpack_require__(4);
 
-var _reactMotion = __webpack_require__(1);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Accueil = function (_React$Component) {
-  _inherits(Accueil, _React$Component);
-
-  function Accueil(props) {
-    _classCallCheck(this, Accueil);
-
-    var _this = _possibleConstructorReturn(this, (Accueil.__proto__ || Object.getPrototypeOf(Accueil)).call(this, props));
-
-    _this.state = {
-      introToggle: false,
-      stMartinToggle: false,
-      investirToggle: false
-    };
-    _this.onClick = _this.onClick.bind(_this);
-    _this.handleIntroAnimation = _this.handleIntroAnimation.bind(_this);
-    _this.handleScroll = _this.handleScroll.bind(_this);
-    return _this;
-  }
-
-  _createClass(Accueil, [{
-    key: 'onClick',
-    value: function onClick() {
-      window.scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth'
-      });
-    }
-  }, {
-    key: 'handleScroll',
-    value: function handleScroll() {
-      var stMartinTop = document.getElementById("home-st-martin").getBoundingClientRect().top;
-      if (stMartinTop < 500) {
-        this.setState({ stMartinToggle: true });
-      };
-      var investirTop = document.getElementById("home-investir").getBoundingClientRect().top;
-      if (investirTop < 495) {
-        this.setState({ investirToggle: true });
-      }
-    }
-  }, {
-    key: 'handleIntroAnimation',
-    value: function handleIntroAnimation() {
-      this.setState({ introToggle: true });
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      this.handleIntroAnimation();
-      window.addEventListener('scroll', this.handleScroll);
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      var _this2 = this;
-
-      return _react2.default.createElement(
-        'div',
-        { className: 'parent-divs' },
-        _react2.default.createElement(
-          'div',
-          { className: 'home-header' },
-          _react2.default.createElement(_Navbar2.default, { path: this.props.location.pathname }),
-          _react2.default.createElement(
-            'div',
-            { className: 'video-container' },
-            _react2.default.createElement('video', { className: 'video-background', autoPlay: true, muted: true, loop: true, preload: 'auto', src: '/public/img/video.mp4' })
-          ),
-          _react2.default.createElement(
-            _reactMotion.Motion,
-            { style: { p: (0, _reactMotion.spring)(this.state.introToggle ? 0 : 1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.introToggle ? 1 : 0, { stiffness: 30, damping: 33 }) } },
-            function (_ref) {
-              var p = _ref.p,
-                  o = _ref.o;
-              return _react2.default.createElement(
-                'div',
-                { className: 'home-header-title', style: { transform: 'translateY(' + p + 'px)' } },
-                _react2.default.createElement(
-                  'div',
-                  null,
-                  _react2.default.createElement(
-                    'h1',
-                    { style: { opacity: '' + o } },
-                    ' Holiday Homes 7 '
-                  )
-                )
-              );
-            }
-          )
-        ),
-        _react2.default.createElement(
-          _reactMotion.Motion,
-          { style: { p: (0, _reactMotion.spring)(this.state.introToggle ? 0 : -1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.introToggle ? 1 : 0, { stiffness: 30, damping: 26 }) } },
-          function (_ref2) {
-            var p = _ref2.p,
-                o = _ref2.o;
-            return _react2.default.createElement(
-              'div',
-              { className: 'row home-intro' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col-md-4 col-sm-4' },
-                _react2.default.createElement(
-                  'h2',
-                  { style: { transform: 'translateX(' + p + 'px)', opacity: '' + o } },
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    { style: { color: "#135589" } },
-                    'Profitez'
-                  ),
-                  ' ',
-                  _react2.default.createElement('br', null),
-                  ' de Saint-Martin. '
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col-md-8 col-sm-8' },
-                _react2.default.createElement(
-                  'p',
-                  { style: { transform: 'translateX(' + -p + 'px)', opacity: '' + o } },
-                  ' Nous sommes Holiday Homes 7, une entreprise d\u2019investissements immobiliers. Situ\xE9s \xE0 St-Martin, nous sommes en mesure de vous procurer villas et appartements, terrains et locaux de qualit\xE9 dans le d\xE9cor de r\xEAve qu\u2019est cette merveilleuse \xEEle: collines verdoyantes, plages de sable fin, eau turquoise \xE0 perte de vue\u2026 St-Martin ne manque pas de facettes \xE0 d\xE9couvrir !'
-                )
-              )
-            );
-          }
-        ),
-        _react2.default.createElement(
-          _reactMotion.Motion,
-          { style: { p: (0, _reactMotion.spring)(this.state.stMartinToggle ? 0 : -1000, { stiffness: 100, damping: 26 }), o: (0, _reactMotion.spring)(this.state.stMartinToggle ? 1 : 0, { stiffness: 30, damping: 26 }), s: (0, _reactMotion.spring)(this.state.stMartinToggle ? 1 : 1.5, { stiffness: 30, damping: 26 }) } },
-          function (_ref3) {
-            var p = _ref3.p,
-                o = _ref3.o,
-                s = _ref3.s;
-            return _react2.default.createElement(
-              'div',
-              { className: 'row home-st-martin', id: 'home-st-martin' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col-md-6 col-sm-6' },
-                _react2.default.createElement(
-                  'div',
-                  { className: 'home-st-martin-img' },
-                  _react2.default.createElement('div', { style: { transform: 'scale(' + s + ')' } })
-                )
-              ),
-              _react2.default.createElement(
-                'div',
-                { className: 'col-md-6 col-sm-6', style: { transform: 'translateX(' + -p + 'px)', opacity: '' + o } },
-                _react2.default.createElement(
-                  'h1',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    { style: { color: "#135589" } },
-                    ' D\xE9couvrez '
-                  ),
-                  ' ',
-                  _react2.default.createElement('br', null),
-                  ' Saint-Martin, ',
-                  _react2.default.createElement('br', null),
-                  ' la friendly island. '
-                ),
-                _react2.default.createElement(
-                  'button',
-                  null,
-                  ' ',
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    ' ',
-                    _react2.default.createElement(
-                      _reactRouter.Link,
-                      { to: '/saint-martin', onClick: _this2.onClick },
-                      ' Pour en apprendre plus sur Saint-Martin '
-                    ),
-                    ' '
-                  ),
-                  ' '
-                )
-              )
-            );
-          }
-        ),
-        _react2.default.createElement(
-          _reactMotion.Motion,
-          { style: { p: (0, _reactMotion.spring)(this.state.investirToggle ? 0 : -1000, { stiffness: 100, damping: 33 }), o: (0, _reactMotion.spring)(this.state.investirToggle ? 1 : 0, { stiffness: 30, damping: 26 }) } },
-          function (_ref4) {
-            var p = _ref4.p,
-                o = _ref4.o;
-            return _react2.default.createElement(
-              'div',
-              { className: 'row home-estates', id: 'home-investir' },
-              _react2.default.createElement(
-                'div',
-                { className: 'col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 sol-xs-12', style: { transform: 'translateX(' + -p + 'px)' } },
-                _react2.default.createElement(
-                  'h1',
-                  { style: { opacity: '' + o } },
-                  ' ',
-                  _react2.default.createElement(
-                    'strong',
-                    null,
-                    ' Investissez '
-                  ),
-                  ' ',
-                  _react2.default.createElement('br', null),
-                  ' dans un petit bout ',
-                  _react2.default.createElement('br', null),
-                  ' de paradis.'
-                ),
-                _react2.default.createElement(
-                  'button',
-                  { style: { opacity: '' + o } },
-                  ' ',
-                  _react2.default.createElement(
-                    'p',
-                    null,
-                    ' ',
-                    _react2.default.createElement(
-                      _reactRouter.Link,
-                      { to: '/investir', onClick: _this2.onClick },
-                      ' Consultez nos propri\xE9t\xE9s ! '
-                    ),
-                    ' '
-                  )
-                )
-              )
-            );
-          }
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'row home-contact' },
-          _react2.default.createElement(
-            'button',
-            null,
-            ' ',
-            _react2.default.createElement(
-              'h1',
-              null,
-              ' ',
-              _react2.default.createElement(
-                _reactRouter.Link,
-                { to: '/contact', onClick: this.onClick },
-                ' Contactez-nous ! '
-              ),
-              ' '
-            ),
-            ' '
-          )
-        ),
-        _react2.default.createElement(_Footer2.default, { path: this.props.location.pathname })
-      );
-    }
-  }]);
-
-  return Accueil;
-}(_react2.default.Component);
-
-exports.default = Accueil;
-;
-
-/***/ }),
-/* 25 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _Navbar = __webpack_require__(3);
-
-var _Navbar2 = _interopRequireDefault(_Navbar);
-
-var _Footer = __webpack_require__(13);
-
-var _Footer2 = _interopRequireDefault(_Footer);
-
-var _reactRouter = __webpack_require__(2);
-
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2909,7 +2924,7 @@ exports.default = Home;
 ;
 
 /***/ }),
-/* 26 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2929,11 +2944,11 @@ var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3226,7 +3241,7 @@ var Invest = function (_React$Component) {
             ' ',
             _react2.default.createElement(
               'a',
-              { target: '__blank', href: 'https://www.facebook.com/homesevensxm/' },
+              { target: '__blank', href: 'https://facebook.com/holidayhomeseven/' },
               ' Consult the other propreties we are selling on our Facebook page. '
             ),
             ' ',
@@ -3245,7 +3260,7 @@ var Invest = function (_React$Component) {
             ' ',
             _react2.default.createElement(
               'a',
-              { target: '__blank', href: 'https://fr.airbnb.ca/s?host_id=96977877&s_tag=A7DvdiEZ&allow_override%5B%5D=' },
+              { target: '__blank', href: 'https://airbnb.ca/s?host_id=96977877&s_tag=A7DvdiEZ&allow_override%5B%5D=' },
               ' Consult our propreties for rent on Airbnb. '
             ),
             '  '
@@ -3264,7 +3279,7 @@ exports.default = Invest;
 ;
 
 /***/ }),
-/* 27 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3284,11 +3299,11 @@ var _Navbar = __webpack_require__(3);
 
 var _Navbar2 = _interopRequireDefault(_Navbar);
 
-var _Footer = __webpack_require__(13);
+var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-var _reactMotion = __webpack_require__(1);
+var _reactMotion = __webpack_require__(2);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3507,35 +3522,13 @@ exports.default = StMarteen;
 ;
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var config = {};
-
-config.service = 'Gmail';
-config.username = 'tarfadesign@gmail.com';
-config.password = 'Mangaka2';
-config.sendAddr = 'paulinecaucheferpro@gmail.com';
-
-module.exports = config;
-
-/***/ }),
-/* 29 */
+/* 23 */
 /***/ (function(module, exports) {
 
-module.exports = require("body-parser");
+module.exports = require("classnames");
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports) {
-
-module.exports = require("nodemailer");
-
-/***/ }),
-/* 31 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("whatwg-fetch");
