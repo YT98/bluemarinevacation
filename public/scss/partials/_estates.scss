@@ -131,6 +131,75 @@
   }
 }
 
+.apt {
+  margin-bottom: 50px;
+
+  h1 {
+    color: $dark-blue;
+    margin-top : 50px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+  }
+
+  .img {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-image: url('/public/img/apt.jpg');
+    background-size: cover;
+    background-position: center;
+    .header-container {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    h1 {
+      background: linear-gradient(rgba(19, 85, 137, 0.55), rgba(19, 85, 137, 0.55)), rgba(19, 85, 137,0.35);
+      width: 600px;
+      margin: auto;
+      padding: 20px;
+      color: white;
+    }
+  }
+
+  .text-container {
+    background-color: $gray-blue;
+    width: 600px;
+    padding: 20px;
+    margin: auto;
+    h3 {
+      color: $blue;
+      font-weight: bold;
+      i {
+        color: $blue;
+      }
+      span {
+        padding-left: 10px;
+        font-weight: lighter;
+        font-size: 20px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      i {
+        color: $blue;
+        padding-right: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .apt {
+    .img { h1{
+      width: 100%;
+    }}
+    .text-container {
+      width: 100%;
+    }
+  }
+}
+
 .facebook {
   color: white;
   background-color: #3b5998;

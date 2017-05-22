@@ -1,5 +1,6 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 import { Link } from 'react-router';
 import { Motion, spring } from 'react-motion';
 
@@ -30,9 +31,11 @@ export default class Home extends React.Component {
       this.setState({stMartinToggle: true})
     };
     let investirTop = document.getElementById("home-investir").getBoundingClientRect().top;
-    if(investirTop < 495) {
+    if(investirTop < 500) {
       this.setState({investirToggle: true})
     }
+    console.log("client height" + document.documentElement.clientHeight)
+    console.log(document.getElementById("home-investir").getBoundingClientRect().bottom)
   }
 
   handleIntroAnimation() {
@@ -52,7 +55,7 @@ export default class Home extends React.Component {
     return(
       <div class="parent-divs">
         <div class="home-header">
-          <Navbar path={this.props.location.pathname}/>
+          <Navbar path={this.props.location.pathname} lang={this.props.lang}/>
           <div class="video-container">
             <video class="video-background" autoPlay muted loop preload="auto" src="/public/img/video.mp4"></video>
           </div>
@@ -72,10 +75,10 @@ export default class Home extends React.Component {
           {({p, o}) =>
             <div class="row home-intro">
               <div class="col-md-4 col-sm-4">
-                <h2 style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> <strong style={{color: "#135589"}}>Profitez</strong> <br/> de Saint-Martin. </h2>
+                <h2 style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> <strong style={{color: "#135589"}}>Make the most</strong> <br/> out of St-Marteen. </h2>
               </div>
               <div class="col-md-8 col-sm-8">
-                <p style={{ transform: `translateX(${-p}px)`, opacity: `${o}`}}> Nous sommes Holiday Homes 7, une entreprise d’investissement immobilier. Situés à St-Martin, nous sommes en mesure de vous procurer villas et appartements, terrains et locaux de qualité dans le décor de rêve qu’est cette merveilleuse île: collines verdoyantes, plages de sable fin, eau turquoise a perte de vue… St-Martin ne manque pas de facettes a decouvrir !</p>
+                <p style={{ transform: `translateX(${-p}px)`, opacity: `${o}`}}> We are Holiday Homes 7, a real estate investment firm based in St-Marteen. Working with us means you will have a plethora of villas, apartments, land and commercial premises to choose from in the heavenly scenery that is this wonderful island. Verdant hills, fine sand beaches and crystal-clear turquoise waters… St-Marteen will not disappoint you!</p>
               </div>
             </div>
           }
@@ -88,8 +91,8 @@ export default class Home extends React.Component {
                 <div class="home-st-martin-img"><div style={{transform: `scale(${s})`}}></div></div>
               </div>
               <div class="col-md-6 col-sm-6" style={{ transform: `translateX(${-p}px)`, opacity: `${o}`}}>
-                <h1> <strong style={{color: "#135589"}}> Découvrez </strong> <br /> Saint-Martin, <br/> la friendly island. </h1>
-                <button> <p> <Link to="/saint-martin" onClick={this.onClick}> Pour en apprendre plus sur Saint-Martin </Link> </p> </button>
+                <h1> <strong style={{color: "#135589"}}> Discover </strong> <br /> St-Marteen, <br/> the friendly island. </h1>
+                <button> <p> <Link to="/en/st-marteen" onClick={this.onClick}> Learn more about St-Marteen </Link> </p> </button>
               </div>
             </div>
           }
@@ -99,17 +102,18 @@ export default class Home extends React.Component {
           {({p, o}) =>
             <div class="row home-estates" id="home-investir">
               <div class="col-md-6 col-md-offset-6 col-sm-6 col-sm-offset-6 sol-xs-12" style={{ transform: `translateX(${-p}px)`}}>
-                <h1 style={{opacity: `${o}`}}> <strong> Investissez </strong> <br/> dans un petit bout <br/> de paradis.</h1>
-                <button style={{opacity: `${o}`}}> <p> <Link to="/investir" onClick={this.onClick}> Consultez nos propriétés ! </Link> </p></button>
+                <h1 style={{opacity: `${o}`}}> <strong> Invest </strong> <br/> in your own <br/> little haven.</h1>
+                <button style={{opacity: `${o}`}}> <p> <Link to="/en/invest" onClick={this.onClick}> Discover our estates </Link> </p></button>
               </div>
             </div>
           }
         </Motion>
-        
+
         <div class="row home-contact">
-          <button> <h1> <Link to="/contact" onClick={this.onClick}> Contactez-nous ! </Link> </h1> </button>
+          <button> <h1> <Link to="/en/contact" onClick={this.onClick}> Contact-us ! </Link> </h1> </button>
         </div>
 
+        <Footer path={this.props.location.pathname} />
       </div>
     );
   };

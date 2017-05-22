@@ -1,10 +1,9 @@
 import React from 'react';
 import { Motion, spring } from 'react-motion';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
-import 'whatwg-fetch';
+import Navbar from '../../components/Navbar';
+import Footer from '../../components/Footer';
 
-export default class Contact extends React.Component {
+export default class EnContact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,7 +37,7 @@ export default class Contact extends React.Component {
       this.setState({formToggle: true});
     };
     let infoTop = document.getElementById('info').getBoundingClientRect().top;
-    if (infoTop < 400) {
+    if (infoTop < 500) {
       this.setState({infoToggle: true});
     }
   }
@@ -91,9 +90,9 @@ export default class Contact extends React.Component {
     let phoneTest = phoneReg.test(this.state.phone)
 
     if (mailTest == false || phoneTest == false) {
-      let phone = phoneTest ? '' : 'Le numéro de téléphone est invalide.'
-      let mail = mailTest ? '' : 'L\'addresse mail est invalide.'
-      alert( "Il nous faut une addresse mail et un numéro de téléphone pour pouvoir vous recontacter!" + "\n" + phone + "\n" + mail)
+      let phone = phoneTest ? '' : 'The phone number you provided is invalid.'
+      let mail = mailTest ? '' : 'The e-mail address you provided is invalid.'
+      alert( "We need your e-mail address and phone number to be able to contact you back!" + "\n" + phone + "\n" + mail)
     } else {
       fetch('http://localhost:5000/sendmail', {
         method: 'POST',
@@ -107,16 +106,15 @@ export default class Contact extends React.Component {
           phone: this.state.phone,
           services: this.state.select,
           info: this.state.info,
-          lang: 'Français'
+          lang: 'English'
         })
       }).catch(function(error) {
-        alert('Votre message n\'a pas été envoyé du a un problème technique. Veuillez reéssayer plus tard. Vous pouvez toujours nous contacter à l\'addresse suivante: paulinecaucheferpro@gmail.com')
+        alert('Your message was not send due to technical issues on our part. Please try again later. You can always contact us using the following address: paulinecaucheferpro@gmail.com')
       }).then(
-        alert('Votre message a été envoyé! Nous vous contacterons dans les plus bref délais.')
+        alert('Your message was sent! We will contact you back as soon as we can!')
       );
     }
   }
-
 
   componentDidMount() {
     this.setState({introToggle: true});
@@ -140,7 +138,7 @@ export default class Contact extends React.Component {
                 <div class="title" style={{opacity: `${o}`}}><h1> Contact </h1></div>
               </div>
               <div class="row intro-contact">
-              <p class="col-md-6" style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> Peu importe le continent dans lequel vous vivez, n'hésitez surtout pas a nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous répondrons à toutes vos questions. Vous pouvez aussi contacter Pauline, notre représentante aux ventes, grâce aux coordonnes plus bas sur cette page; elle se fera un plaisir de répondre a toutes vos requêtes !</p>
+              <p class="col-md-6" style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> Wherever you live, don’t hesitate to contact us, we offer our services all over the globe. You can fill out the contact form beneath and we will answer any question you might have. You can also contact Pauline, our sales representative, by using the contact information provided under the contact form; she will be happy to answer any and all your questions and requests !</p>
               </div>
             </div>
           }
@@ -150,48 +148,48 @@ export default class Contact extends React.Component {
           {({o}) =>
             <div class="contact-formulaire-container" id="form">
               <div class="contact-formulaire" style={{opacity: `${o}`}}>
-                <h1> Formulaire </h1>
+                <h1> Form </h1>
                 <div>
                   <span className={this.state.nameToggle ? 'input input--jiro input--filled' : 'input input--jiro'}>
           					<input class="input__field input__field--jiro" type="text" id="input-10" value={this.state.name} onChange={this.handleChangeName}/>
           					<label class="input__label input__label--jiro" for="input-10">
-          						<span class="input__label-content input__label-content--jiro"> Nom et prénom </span>
+          						<span class="input__label-content input__label-content--jiro"> First and last name: </span>
           					</label>
           				</span>
 
                   <span className={this.state.mailToggle ? 'input input--jiro input--filled' : 'input input--jiro'}>
           					<input class="input__field input__field--jiro" type="text" id="input-10" value={this.state.mail} onChange={this.handleChangeMail}/>
           					<label class="input__label input__label--jiro" for="input-10">
-          						<span class="input__label-content input__label-content--jiro"> Adresse courriel </span>
+          						<span class="input__label-content input__label-content--jiro"> E-Mail address: </span>
           					</label>
           				</span>
 
                   <span className={this.state.phoneToggle ? 'input input--jiro input--filled' : 'input input--jiro'}>
           					<input class="input__field input__field--jiro" type="text" id="input-10" value={this.state.phone} onChange={this.handleChangePhone}/>
           					<label class="input__label input__label--jiro" for="input-10">
-          						<span class="input__label-content input__label-content--jiro"> Numéro de téléphone </span>
+          						<span class="input__label-content input__label-content--jiro"> Phone number: </span>
           					</label>
           				</span>
 
                   <div class="multiple-choice">
-                    <p> Vous cherchez: </p>
+                    <p> You are looking for </p>
                     <select value={this.state.select} onChange={this.handleChangeSelect}>
-                      <option value="Rien de particulier, je me renseigne." >Rien de particulier, je me renseigne.</option>
-                      <option value="Une propriete pour passer mes vacances." >Une propriété pour passer mes vacances.</option>
-                      <option value="Une propriété pour y vivre à l'année longue.">Une propriété pour y vivre à l'année longue.</option>
-                      <option value="À flipper: acheter et rénover pour ensuite revendre.">À flipper: acheter et rénover pour ensuite revendre.</option>
-                      <option value="À acheter une propriété dans le but de la mettre en location.">À acheter une propriété dans le but de la mettre en location.</option>
+                      <option value="Nothing in particular, I am simply asking about."> Nothing in particular, I am simply asking about.</option>
+                      <option value="A place to spend my vacations."> A place to spend my vacations.</option>
+                      <option value="A place to live in all year round."> A place to live in all year round.</option>
+                      <option value="A property to flip: buying, renovating and then selling at a higher price."> A property to flip: buying, renovating, and then selling at a higher price</option>
+                      <option value="A property to rent out."> A property to rent out. </option>
                     </select>
                   </div>
 
                   <div class="text-area">
-                    <p> Information supplementaire </p>
+                    <p> Additional information : </p>
                     <textarea value={this.state.info} onChange={this.handleChangeInfo}/>
                   </div>
 
-                  <p> Sachez que, si vous le souhaitez, notre entreprise vous accompagne à chaque étape de votre projet: aide à la revente, gestion de la location de votre propriété, aide à son entretien… </p>
+                  <p> If you wish, we can accompany you at every step of your project: whether you have trouble selling, managing rent, upkeep or anything else, we can assist you. </p>
 
-                  <button onClick={this.handleSubmit}><h4> Envoyer </h4></button>
+                  <button onClick={this.handleSubmit}><h4> Send </h4></button>
                 </div>
               </div>
             </div>
@@ -206,7 +204,7 @@ export default class Contact extends React.Component {
               </div>
               <div class="nom col-md-4 col-sm-4" style={{opacity: `${o}`}}>
                 <h3> Pauline Cauchefer </h3>
-                <h4> Représentante aux ventes </h4>
+                <h4> Sales representative </h4>
               </div>
               <div class="info col-md-4 col-sm-4" style={{transform: `translateX(${-p}px)`, opacity: `${o}`}}>
                 <h4> <i class="fa fa-phone"/> +1 438-497-0297 </h4>
@@ -219,7 +217,6 @@ export default class Contact extends React.Component {
         </Motion>
 
         <Footer path={this.props.location.pathname} />
-
       </div>
     );
   };

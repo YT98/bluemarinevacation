@@ -1,6 +1,12 @@
+.nav-logo {
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: 15px;
+}
 .navbar {
 	z-index: 5;
 	border-radius: 0;
+	border: 0px;
 	margin-bottom: 0;
 }
 .navbar-new {
@@ -19,6 +25,18 @@
 			}
 			&:focus {
 				background-color: $dark-blue;
+			}
+		}
+
+		.lang {
+			color: $dark-blue;
+			background-color: white;
+			transition: padding 0.5s, font-weight 0.25s;
+			&:hover {
+				padding-left: 20px;
+				padding-right: 20px;
+				font-weight: bold;
+				background-color: white;
 			}
 		}
 
@@ -48,4 +66,10 @@
 			background-color: white;
 		}
 	}
+}
+
+.navbar-brand {
+	padding: 0;
+	padding-left: 10px;
+	padding-top: 5px;
 }

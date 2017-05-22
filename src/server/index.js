@@ -2,73 +2,47 @@
 import express from 'express';
 var app = express();
 
-import cool from 'cool-ascii-faces';
-app.get('/cool', function(request, response) {
-  response.send(cool());
+// Nodemailer
+import config from './config';
+import nodemailer from 'nodemailer';
+import bodyParser from 'body-parser';
+
+const transporter = nodemailer.createTransport({
+  service: config.service,
+  auth: {
+    user: config.username,
+    pass: config.password
+  }
 });
 
-// Restful API module imports
-// import bodyParser from 'body-parser';
-// import mongoose from 'mongoose';
-// import Estate from './models/estate';
+// REST API
+app.use(bodyParser.json());
 
-//  RESTFUL API
-// app.use(bodyParser.json());
+app.post('/sendmail', function (req, res) {
 
-// Connect to mongoose
-// mongoose.connect('mongodb://localhost/bookstore');
-// var db = mongoose.connection;
+  function sprintf(template, values) {
+    return template.replace(/%s/g, function() {
+      return values.shift();
+    });
+  }
+  let text = sprintf('Nom: %s \nAddresse mail: %s \nNuméro de téléphone: %s \nService désiré: %s \nInformation additionelle: %s \nLangue: %s', [
+    req.body.name, req.body.mail, req.body.phone, req.body.services, req.body.info, req.body.lang
+  ])
 
-// Get EstateS
-// app.get('/api/estates', (req, res) => {
-//     Estate.getEstates((err, estates) => {
-//         if(err) {
-//             throw err;
-//         }
-//         else {
-//             res.json(estates);
-//         }
-//     });
-// });
+  transporter.sendMail({
+    from: config.username,
+    to: config.username,
+    subject: 'Formulaire holidayhomes7.com',
+    text : text
+  }, function(error, response){
+    if (error) {
+      res.status(500);
+    } else {
+      res.status(200);
+    }
+  });
 
-// Get Estate :/id
-// app.get('/api/estates/:_id', (req, res) => {
-//   Estate.getEstateById(req.params._id, (err, estate) => {
-//     if(err) {
-//       throw(err);
-//     } else {
-//       res.json(estate);
-//     }
-//   })
-// })
-
-// Post Estate
-// app.post('/api/estates', (req, res) => {
-//     var estate = req.body;
-//     Estate.addEstate(estate, function(err, estate){
-//         if(err) {
-//             throw err;
-//         }
-//         else {
-//             res.json(estate);
-//         }
-//     });
-// });
-
-// Update Estate
-
-// Delete Estate /:id
-// app.delete('/api/estates/:_id', (req, res) => {
-//     var id = req.params._id;
-//     Estate.deleteEstate(id, (err, estate) => {
-//         if(err) {
-//             throw err;
-//         }
-//         else {
-//             res.json(estate);
-//         }
-//     });
-// });
+});
 
 // Server-side rendering module imports
 import path from 'path';
@@ -78,7 +52,7 @@ import { match, RouterContext } from 'react-router';
 import routes from '../shared/routes';
 import template from './template';
 
-//  SERVER-SIDE RENDERING
+//  Server-side rendering
 app.use('/dist/client', express.static(__dirname + '/client'));
 app.use('/public', express.static(__dirname + '/../public'));
 
@@ -89,14 +63,15 @@ app.get('*', (req, res) => {
     } else if (redirectLocation) {
       res.redirect(302, redirectLocation.pathname + redirectLocation.search)
     } else if (renderProps) {
+      let lang = req.language;
       let html = renderToString(<RouterContext {...renderProps} />);
-      res.status(200).send(template({body: html}));
+      res.status(200).send(template({body: html, lang: lang}));
     } else {
       res.status(400).send('Not found.')
     }
   });
 });
 
-
+//
 const PORT = 5000;
 app.listen(PORT, console.log('App ready: Listening on port' + PORT));

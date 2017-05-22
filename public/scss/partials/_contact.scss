@@ -145,6 +145,34 @@
         }
       }
     }
+
+    .multiple-choice {
+    	margin-left: 0px;
+    	p {
+    		font-size: 14px;
+        font-family: 'open-sans', sans-serif;
+        margin-bottom: 5px;
+    	}
+      select {
+        margin: 0px;
+        background-color: white;
+        border: 0px solid;
+        border-radius: 0px;
+      }
+    }
+
+    .text-area {
+      margin-left: 0px;
+    	p {
+    		font-size: 14px;
+        font-family: 'open-sans', sans-serif;
+        margin-bottom: 5px;
+    	}
+      textarea {
+        border: 0px;
+        width: 400px;
+      }
+    }
   }
 }
 
