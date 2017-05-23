@@ -13599,7 +13599,7 @@ var Contact = function (_React$Component) {
                 _react2.default.createElement(
                   'p',
                   { className: 'col-md-6', style: { transform: 'translateX(' + p + 'px)', opacity: '' + o } },
-                  ' Peu importe le continent dans lequel vous vivez, n\'h\xE9sitez surtout pas a nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous r\xE9pondrons \xE0 toutes vos questions. Vous pouvez aussi contacter Pauline, notre repr\xE9sentante aux ventes, gr\xE2ce aux coordonnes plus bas sur cette page; elle se fera un plaisir de r\xE9pondre a toutes vos requ\xEAtes !'
+                  ' Peu importe le continent dans lequel vous vivez, n\'h\xE9sitez surtout pas a nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous r\xE9pondrons \xE0 toutes vos questions. Vous pouvez aussi contacter Pauline, notre repr\xE9sentante aux ventes, gr\xE2ce aux coordonn\xE9es plus bas sur cette page; elle se fera un plaisir de r\xE9pondre a toutes vos requ\xEAtes !'
                 )
               )
             );
@@ -14324,7 +14324,7 @@ var SaintMartin = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     { style: { opacity: '' + o } },
-                    ' Saint-Martin est une \xEEle des Antilles fran\xE7aises situ\xE9e \xE0 l\'est de Puerto Rico et au sud d\'Anguilla. Le territoire est divis\xE9 en deux: Saint-Martin, territoire fran\xE7ais au nord et St-Marteen, territoire n\xE9erlandais au sud. Les capitales des deux territoires sont, respectivement, Marigot et Phillipsburg. L\'\xEEle est parsem\xE9e de collines et de vall\xE9es, la plus colline la plus \xE9lev\xE9e \xE9tant Pic Paradis (424 m). Le littoral est bord\xE9 de nombreuses baies et recouvert d\'une trentaine de plages de sable blanc et de quelques plages de galets. Le climat de Saint-Martin est tr\xE8s agr\xE9able: la temp\xE9rature ne varie que tr\xE8s peu durant l\'ann\xE9e: elle se situe entre 32-34 &8451; celcius et 20-22 &8451;. '
+                    ' Saint-Martin est une \xEEle des Antilles fran\xE7aises situ\xE9e \xE0 l\'est de Puerto Rico et au sud d\'Anguilla. Le territoire est divis\xE9 en deux: Saint-Martin, territoire fran\xE7ais au nord et St-Marteen, territoire n\xE9erlandais au sud. Les capitales des deux territoires sont, respectivement, Marigot et Phillipsburg. L\'\xEEle est parsem\xE9e de collines et de vall\xE9es, la plus colline la plus \xE9lev\xE9e \xE9tant Pic Paradis (424 m). Le littoral est bord\xE9 de nombreuses baies et recouvert d\'une trentaine de plages de sable blanc et de quelques plages de galets. Le climat de Saint-Martin est tr\xE8s agr\xE9able: la temp\xE9rature ne varie que tr\xE8s peu durant l\'ann\xE9e: elle se situe entre 32-34 \u2103 celcius et 20-22 \u2103. '
                   )
                 )
               );
