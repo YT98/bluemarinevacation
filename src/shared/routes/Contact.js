@@ -110,7 +110,7 @@ export default class Contact extends React.Component {
           lang: 'Français'
         })
       }).catch(function(error) {
-        alert('Votre message n\'a pas été envoyé du a un problème technique. Veuillez reéssayer plus tard. Vous pouvez toujours nous contacter à l\'addresse suivante: paulinecaucheferpro@gmail.com')
+        alert('Votre message n\'a pas été envoyé du a un problème technique. Veuillez reéssayer plus tard. Vous pouvez toujours nous contacter à l\'addresse suivante: caucheferpaulinepro@gmail.com')
       }).then(
         alert('Votre message a été envoyé! Nous vous contacterons dans les plus bref délais.')
       );
@@ -212,7 +212,7 @@ export default class Contact extends React.Component {
                 <h4> <i class="fa fa-phone"/> +1 438-497-0297 </h4>
                 <h4> <i class="fa fa-envelope" /> paulinecaucheferpro@gmail.com </h4>
                 <p> <i class="fa fa-phone"/> +1 438-497-0297 </p>
-                <p> <i class="fa fa-envelope" /> paulinecaucheferpro@gmail.com </p>
+                <p> <i class="fa fa-envelope" /> caucheferpaulinepro@gmail.com </p>
               </div> 
             </div>
           }

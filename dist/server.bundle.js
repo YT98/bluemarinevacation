@@ -1320,7 +1320,7 @@ var Contact = function (_React$Component) {
             lang: 'Français'
           })
         }).catch(function (error) {
-          alert('Votre message n\'a pas été envoyé du a un problème technique. Veuillez reéssayer plus tard. Vous pouvez toujours nous contacter à l\'addresse suivante: paulinecaucheferpro@gmail.com');
+          alert('Votre message n\'a pas été envoyé du a un problème technique. Veuillez reéssayer plus tard. Vous pouvez toujours nous contacter à l\'addresse suivante: caucheferpaulinepro@gmail.com');
         }).then(alert('Votre message a été envoyé! Nous vous contacterons dans les plus bref délais.'));
       }
     }
@@ -1563,7 +1563,7 @@ var Contact = function (_React$Component) {
                   null,
                   ' ',
                   _react2.default.createElement('i', { className: 'fa fa-envelope' }),
-                  ' paulinecaucheferpro@gmail.com '
+                  ' caucheferpaulinepro@gmail.com '
                 )
               ),
               '\xA0'
@@ -2346,7 +2346,7 @@ var EnContact = function (_React$Component) {
             lang: 'English'
           })
         }).catch(function (error) {
-          alert('Your message was not send due to technical issues on our part. Please try again later. You can always contact us using the following address: paulinecaucheferpro@gmail.com');
+          alert('Your message was not send due to technical issues on our part. Please try again later. You can always contact us using the following address: caucheferpaulinepro@gmail.com');
         }).then(alert('Your message was sent! We will contact you back as soon as we can!'));
       }
     }
@@ -2589,7 +2589,7 @@ var EnContact = function (_React$Component) {
                   null,
                   ' ',
                   _react2.default.createElement('i', { className: 'fa fa-envelope' }),
-                  ' paulinecaucheferpro@gmail.com '
+                  ' caucheferpaulinepro@gmail.com '
                 )
               ),
               '\xA0'

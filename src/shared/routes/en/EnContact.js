@@ -109,7 +109,7 @@ export default class EnContact extends React.Component {
           lang: 'English'
         })
       }).catch(function(error) {
-        alert('Your message was not send due to technical issues on our part. Please try again later. You can always contact us using the following address: paulinecaucheferpro@gmail.com')
+        alert('Your message was not send due to technical issues on our part. Please try again later. You can always contact us using the following address: caucheferpaulinepro@gmail.com')
       }).then(
         alert('Your message was sent! We will contact you back as soon as we can!')
       );
@@ -210,7 +210,7 @@ export default class EnContact extends React.Component {
                 <h4> <i class="fa fa-phone"/> +1 438-497-0297 </h4>
                 <h4> <i class="fa fa-envelope" /> paulinecaucheferpro@gmail.com </h4>
                 <p> <i class="fa fa-phone"/> +1 438-497-0297 </p>
-                <p> <i class="fa fa-envelope" /> paulinecaucheferpro@gmail.com </p>
+                <p> <i class="fa fa-envelope" /> caucheferpaulinepro@gmail.com </p>
               </div> 
             </div>
           }
