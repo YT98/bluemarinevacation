@@ -2,10 +2,6 @@
 import express from 'express';
 var app = express();
 
-// Sitemap generator
-// var sitemap = require('express-sitemap')();
-// sitemap.generate(app).XMLtofile('./sitemap.xml');
-
 // Nodemailer
 import config from './config';
 import nodemailer from 'nodemailer';
