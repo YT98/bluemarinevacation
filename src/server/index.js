@@ -2,6 +2,9 @@
 import express from 'express';
 var app = express();
 
+app.use('/sitemap.xml', express.static(__dirname + '/../public/sitemap.xml'));
+app.use('/robots.txt', express.static(__dirname + '/../public/robots.txt'));
+
 // Nodemailer
 import config from './config';
 import nodemailer from 'nodemailer';

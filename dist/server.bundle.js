@@ -718,14 +718,13 @@ var _template2 = _interopRequireDefault(_template);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var app = (0, _express2.default)();
+var app = (0, _express2.default)(); // Express app init
 
-// Sitemap generator
-// var sitemap = require('express-sitemap')();
-// sitemap.generate(app).XMLtofile('./sitemap.xml');
+
+app.use('/sitemap.xml', _express2.default.static(__dirname + '/../public/sitemap.xml'));
+app.use('/robots.txt', _express2.default.static(__dirname + '/../public/robots.txt'));
 
 // Nodemailer
-// Express app init
 
 
 var transporter = _nodemailer2.default.createTransport({
