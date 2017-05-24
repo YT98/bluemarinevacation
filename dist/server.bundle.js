@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 13);
+/******/ 	return __webpack_require__(__webpack_require__.s = 14);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -348,7 +348,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(4);
 
-var _classnames = __webpack_require__(23);
+var _classnames = __webpack_require__(24);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -585,39 +585,39 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(4);
 
-var _Layout = __webpack_require__(14);
+var _Layout = __webpack_require__(15);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _Accueil = __webpack_require__(15);
+var _Accueil = __webpack_require__(16);
 
 var _Accueil2 = _interopRequireDefault(_Accueil);
 
-var _SaintMartin = __webpack_require__(18);
+var _SaintMartin = __webpack_require__(19);
 
 var _SaintMartin2 = _interopRequireDefault(_SaintMartin);
 
-var _Investir = __webpack_require__(17);
+var _Investir = __webpack_require__(18);
 
 var _Investir2 = _interopRequireDefault(_Investir);
 
-var _Contact = __webpack_require__(16);
+var _Contact = __webpack_require__(17);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
-var _Home = __webpack_require__(20);
+var _Home = __webpack_require__(21);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _StMarteen = __webpack_require__(22);
+var _StMarteen = __webpack_require__(23);
 
 var _StMarteen2 = _interopRequireDefault(_StMarteen);
 
-var _Invest = __webpack_require__(21);
+var _Invest = __webpack_require__(22);
 
 var _Invest2 = _interopRequireDefault(_Invest);
 
-var _EnContact = __webpack_require__(19);
+var _EnContact = __webpack_require__(20);
 
 var _EnContact2 = _interopRequireDefault(_EnContact);
 
@@ -659,22 +659,28 @@ module.exports = require("express");
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("nodemailer");
+module.exports = require("express-sitemap");
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("path");
+module.exports = require("nodemailer");
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("react-dom/server");
+module.exports = require("path");
 
 /***/ }),
 /* 13 */
+/***/ (function(module, exports) {
+
+module.exports = require("react-dom/server");
+
+/***/ }),
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -688,7 +694,7 @@ var _config = __webpack_require__(5);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _nodemailer = __webpack_require__(10);
+var _nodemailer = __webpack_require__(11);
 
 var _nodemailer2 = _interopRequireDefault(_nodemailer);
 
@@ -696,7 +702,7 @@ var _bodyParser = __webpack_require__(8);
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-var _path = __webpack_require__(11);
+var _path = __webpack_require__(12);
 
 var _path2 = _interopRequireDefault(_path);
 
@@ -704,7 +710,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(12);
+var _server = __webpack_require__(13);
 
 var _reactRouter = __webpack_require__(4);
 
@@ -720,8 +726,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var app = (0, _express2.default)();
 
-// Nodemailer
+// Sitemap generator
 // Express app init
+var sitemap = __webpack_require__(10)();
+sitemap.XMLtofile('./sitemap.xml');
+
+// Nodemailer
 
 
 var transporter = _nodemailer2.default.createTransport({
@@ -786,7 +796,7 @@ var PORT = 5000;
 app.listen(PORT, console.log('App ready: Listening on port' + PORT));
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -841,7 +851,7 @@ exports.default = Layout;
 ;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1148,7 +1158,7 @@ exports.default = Accueil;
 ;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1174,7 +1184,7 @@ var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(24);
+__webpack_require__(25);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1578,7 +1588,7 @@ exports.default = Contact;
 ;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1933,7 +1943,7 @@ exports.default = Investir;
 ;
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2163,17 +2173,6 @@ var SaintMartin = function (_React$Component) {
               );
             }
           ),
-          _react2.default.createElement(
-            'button',
-            { className: 'download' },
-            _react2.default.createElement(
-              'p',
-              null,
-              ' ',
-              _react2.default.createElement('i', { className: 'fa fa-download' }),
-              ' Telechargez le document complet pour encore plus d\'information sur St-Martin '
-            )
-          ),
           _react2.default.createElement(_Footer2.default, { path: this.props.location.pathname })
         )
       );
@@ -2187,7 +2186,7 @@ exports.default = SaintMartin;
 ;
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2615,7 +2614,7 @@ exports.default = EnContact;
 ;
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2924,7 +2923,7 @@ exports.default = Home;
 ;
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3279,7 +3278,7 @@ exports.default = Invest;
 ;
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3522,13 +3521,13 @@ exports.default = StMarteen;
 ;
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports) {
 
 module.exports = require("whatwg-fetch");

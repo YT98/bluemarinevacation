@@ -140,7 +140,7 @@ export default class Contact extends React.Component {
                 <div class="title" style={{opacity: `${o}`}}><h1> Contact </h1></div>
               </div>
               <div class="row intro-contact">
-              <p class="col-md-6" style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> Peu importe le continent dans lequel vous vivez, n'hésitez surtout pas a nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous répondrons à toutes vos questions. Vous pouvez aussi contacter Pauline, notre représentante aux ventes, grâce aux coordonnées plus bas sur cette page; elle se fera un plaisir de répondre a toutes vos requêtes !</p>
+              <p class="col-md-6" style={{transform: `translateX(${p}px)`, opacity: `${o}`}}> Peu importe le continent dans lequel vous vivez, n'hésitez surtout pas à nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous répondrons à toutes vos questions. Vous pouvez aussi contacter Pauline, notre représentante aux ventes, grâce aux coordonnées plus bas sur cette page; elle se fera un plaisir de répondre à toutes vos requêtes !</p>
               </div>
             </div>
           }

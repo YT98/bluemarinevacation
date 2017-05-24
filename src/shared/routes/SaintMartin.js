@@ -112,10 +112,6 @@ export default class SaintMartin extends React.Component {
             }
           </Motion>
 
-          <button class="download">
-            <p> <i class="fa fa-download"/> Telechargez le document complet pour encore plus d'information sur St-Martin </p>
-          </button>
-
           <Footer path={this.props.location.pathname} />
         </div>
       </div>
