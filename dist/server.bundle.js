@@ -1549,7 +1549,7 @@ var Contact = function (_React$Component) {
                   null,
                   ' ',
                   _react2.default.createElement('i', { className: 'fa fa-envelope' }),
-                  ' paulinecaucheferpro@gmail.com '
+                  ' caucheferpaulinepro@gmail.com '
                 ),
                 _react2.default.createElement(
                   'p',

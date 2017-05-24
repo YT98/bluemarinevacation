@@ -210,7 +210,7 @@ export default class Contact extends React.Component {
               </div>
               <div class="info col-md-4 col-sm-4" style={{transform: `translateX(${-p}px)`, opacity: `${o}`}}>
                 <h4> <i class="fa fa-phone"/> +1 438-497-0297 </h4>
-                <h4> <i class="fa fa-envelope" /> paulinecaucheferpro@gmail.com </h4>
+                <h4> <i class="fa fa-envelope" /> caucheferpaulinepro@gmail.com </h4>
                 <p> <i class="fa fa-phone"/> +1 438-497-0297 </p>
                 <p> <i class="fa fa-envelope" /> caucheferpaulinepro@gmail.com </p>
               </div> 
