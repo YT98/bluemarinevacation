@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 13);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -348,7 +348,7 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(4);
 
-var _classnames = __webpack_require__(24);
+var _classnames = __webpack_require__(23);
 
 var _classnames2 = _interopRequireDefault(_classnames);
 
@@ -585,39 +585,39 @@ var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = __webpack_require__(4);
 
-var _Layout = __webpack_require__(15);
+var _Layout = __webpack_require__(14);
 
 var _Layout2 = _interopRequireDefault(_Layout);
 
-var _Accueil = __webpack_require__(16);
+var _Accueil = __webpack_require__(15);
 
 var _Accueil2 = _interopRequireDefault(_Accueil);
 
-var _SaintMartin = __webpack_require__(19);
+var _SaintMartin = __webpack_require__(18);
 
 var _SaintMartin2 = _interopRequireDefault(_SaintMartin);
 
-var _Investir = __webpack_require__(18);
+var _Investir = __webpack_require__(17);
 
 var _Investir2 = _interopRequireDefault(_Investir);
 
-var _Contact = __webpack_require__(17);
+var _Contact = __webpack_require__(16);
 
 var _Contact2 = _interopRequireDefault(_Contact);
 
-var _Home = __webpack_require__(21);
+var _Home = __webpack_require__(20);
 
 var _Home2 = _interopRequireDefault(_Home);
 
-var _StMarteen = __webpack_require__(23);
+var _StMarteen = __webpack_require__(22);
 
 var _StMarteen2 = _interopRequireDefault(_StMarteen);
 
-var _Invest = __webpack_require__(22);
+var _Invest = __webpack_require__(21);
 
 var _Invest2 = _interopRequireDefault(_Invest);
 
-var _EnContact = __webpack_require__(20);
+var _EnContact = __webpack_require__(19);
 
 var _EnContact2 = _interopRequireDefault(_EnContact);
 
@@ -659,28 +659,22 @@ module.exports = require("express");
 /* 10 */
 /***/ (function(module, exports) {
 
-module.exports = require("express-sitemap");
+module.exports = require("nodemailer");
 
 /***/ }),
 /* 11 */
 /***/ (function(module, exports) {
 
-module.exports = require("nodemailer");
+module.exports = require("path");
 
 /***/ }),
 /* 12 */
 /***/ (function(module, exports) {
 
-module.exports = require("path");
-
-/***/ }),
-/* 13 */
-/***/ (function(module, exports) {
-
 module.exports = require("react-dom/server");
 
 /***/ }),
-/* 14 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -694,7 +688,7 @@ var _config = __webpack_require__(5);
 
 var _config2 = _interopRequireDefault(_config);
 
-var _nodemailer = __webpack_require__(11);
+var _nodemailer = __webpack_require__(10);
 
 var _nodemailer2 = _interopRequireDefault(_nodemailer);
 
@@ -702,7 +696,7 @@ var _bodyParser = __webpack_require__(8);
 
 var _bodyParser2 = _interopRequireDefault(_bodyParser);
 
-var _path = __webpack_require__(12);
+var _path = __webpack_require__(11);
 
 var _path2 = _interopRequireDefault(_path);
 
@@ -710,7 +704,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _server = __webpack_require__(13);
+var _server = __webpack_require__(12);
 
 var _reactRouter = __webpack_require__(4);
 
@@ -727,11 +721,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = (0, _express2.default)();
 
 // Sitemap generator
-// Express app init
-var sitemap = __webpack_require__(10)();
-sitemap.XMLtofile('./sitemap.xml');
+// var sitemap = require('express-sitemap')();
+// sitemap.generate(app).XMLtofile('./sitemap.xml');
 
 // Nodemailer
+// Express app init
 
 
 var transporter = _nodemailer2.default.createTransport({
@@ -796,7 +790,7 @@ var PORT = 5000;
 app.listen(PORT, console.log('App ready: Listening on port' + PORT));
 
 /***/ }),
-/* 15 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -851,7 +845,7 @@ exports.default = Layout;
 ;
 
 /***/ }),
-/* 16 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1158,7 +1152,7 @@ exports.default = Accueil;
 ;
 
 /***/ }),
-/* 17 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1184,7 +1178,7 @@ var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(25);
+__webpack_require__(24);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1378,7 +1372,7 @@ var Contact = function (_React$Component) {
                 _react2.default.createElement(
                   'p',
                   { className: 'col-md-6', style: { transform: 'translateX(' + p + 'px)', opacity: '' + o } },
-                  ' Peu importe le continent dans lequel vous vivez, n\'h\xE9sitez surtout pas a nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous r\xE9pondrons \xE0 toutes vos questions. Vous pouvez aussi contacter Pauline, notre repr\xE9sentante aux ventes, gr\xE2ce aux coordonn\xE9es plus bas sur cette page; elle se fera un plaisir de r\xE9pondre a toutes vos requ\xEAtes !'
+                  ' Peu importe le continent dans lequel vous vivez, n\'h\xE9sitez surtout pas \xE0 nous contacter, nous offrons notre service aux quatre coins du globe. Veuillez simplement remplir le formulaire ci-dessous et nous r\xE9pondrons \xE0 toutes vos questions. Vous pouvez aussi contacter Pauline, notre repr\xE9sentante aux ventes, gr\xE2ce aux coordonn\xE9es plus bas sur cette page; elle se fera un plaisir de r\xE9pondre \xE0 toutes vos requ\xEAtes !'
                 )
               )
             );
@@ -1588,7 +1582,7 @@ exports.default = Contact;
 ;
 
 /***/ }),
-/* 18 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1943,7 +1937,7 @@ exports.default = Investir;
 ;
 
 /***/ }),
-/* 19 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2103,7 +2097,7 @@ var SaintMartin = function (_React$Component) {
                   _react2.default.createElement(
                     'p',
                     { style: { opacity: '' + o } },
-                    ' Saint-Martin est une \xEEle des Antilles fran\xE7aises situ\xE9e \xE0 l\'est de Puerto Rico et au sud d\'Anguilla. Le territoire est divis\xE9 en deux: Saint-Martin, territoire fran\xE7ais au nord et St-Marteen, territoire n\xE9erlandais au sud. Les capitales des deux territoires sont, respectivement, Marigot et Phillipsburg. L\'\xEEle est parsem\xE9e de collines et de vall\xE9es, la plus colline la plus \xE9lev\xE9e \xE9tant Pic Paradis (424 m). Le littoral est bord\xE9 de nombreuses baies et recouvert d\'une trentaine de plages de sable blanc et de quelques plages de galets. Le climat de Saint-Martin est tr\xE8s agr\xE9able: la temp\xE9rature ne varie que tr\xE8s peu durant l\'ann\xE9e: elle se situe entre 32-34 \u2103 celcius et 20-22 \u2103. '
+                    ' Saint-Martin est une \xEEle des Antilles fran\xE7aises situ\xE9e \xE0 l\'est de Puerto Rico et au sud d\'Anguilla. Le territoire est divis\xE9 en deux: Saint-Martin, territoire fran\xE7ais au nord et St-Marteen, territoire n\xE9erlandais au sud. Les capitales des deux territoires sont, respectivement, Marigot et Phillipsburg. L\'\xEEle est parsem\xE9e de collines et de vall\xE9es, la colline la plus \xE9lev\xE9e \xE9tant Pic Paradis (424 m). Le littoral est bord\xE9 de nombreuses baies et recouvert d\'une trentaine de plages de sable blanc et de quelques plages de galets. Le climat de Saint-Martin est tr\xE8s agr\xE9able: la temp\xE9rature ne varie que tr\xE8s peu durant l\'ann\xE9e: elle se situe entre 32-34 \u2103 celcius et 20-22 \u2103. '
                   )
                 )
               );
@@ -2186,7 +2180,7 @@ exports.default = SaintMartin;
 ;
 
 /***/ }),
-/* 20 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2614,7 +2608,7 @@ exports.default = EnContact;
 ;
 
 /***/ }),
-/* 21 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2923,7 +2917,7 @@ exports.default = Home;
 ;
 
 /***/ }),
-/* 22 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3278,7 +3272,7 @@ exports.default = Invest;
 ;
 
 /***/ }),
-/* 23 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3521,13 +3515,13 @@ exports.default = StMarteen;
 ;
 
 /***/ }),
-/* 24 */
+/* 23 */
 /***/ (function(module, exports) {
 
 module.exports = require("classnames");
 
 /***/ }),
-/* 25 */
+/* 24 */
 /***/ (function(module, exports) {
 
 module.exports = require("whatwg-fetch");
