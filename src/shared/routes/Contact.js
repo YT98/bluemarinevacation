@@ -2,7 +2,9 @@ import React from 'react';
 import { Motion, spring } from 'react-motion';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import 'whatwg-fetch';
+if (process.env.IS_BROWSER) {
+  require('whatwg-fetch');
+}
 
 export default class Contact extends React.Component {
   constructor(props) {

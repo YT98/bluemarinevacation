@@ -24,6 +24,7 @@
     "express-request-language": "^1.1.10",
     "lodash": "^4.17.4",
     "mongoose": "^4.8.6",
+    "nodemailer": "^4.6.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "react-google-maps": "^4.11.0",

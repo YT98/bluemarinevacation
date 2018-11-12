@@ -6,9 +6,9 @@
 /******/ 	function __webpack_require__(moduleId) {
 /******/
 /******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId])
+/******/ 		if(installedModules[moduleId]) {
 /******/ 			return installedModules[moduleId].exports;
-/******/
+/******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = installedModules[moduleId] = {
 /******/ 			i: moduleId,
@@ -565,7 +565,7 @@ exports.default = function (_ref) {
   var body = _ref.body,
       lang = _ref.lang;
 
-  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>Holiday Homes 7 | Investissements immobiliers </title>\n        <meta name=\"description\" content=\"Vente de proprietes a St-Martin, St-Marteen et St-Barth.\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />\n        <script src=\"https://use.fontawesome.com/0cee7cce00.js\"></script>\n        <link rel=\"icon\" type=\"image/png\" href=\"/public/img/favicon.ico\">\n        <link rel=\"stylesheet\" href=\"/public/style.css\" />\n      </head>\n\n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n\n      <script src=\"/dist/client/client.bundle.js\"></script>\n      <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>\n      <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n    </html>\n  ";
+  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <title>Holiday Homes 7 | Investissements immobiliers </title>\n        <meta name=\"description\" content=\"Vente de proprietes a St-Martin, St-Marteen et St-Barth.\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\">\n        <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" />\n        <script src=\"https://use.fontawesome.com/0cee7cce00.js\"></script>\n        <link rel=\"icon\" type=\"image/png\" href=\"/public/img/favicon.ico\">\n        <link rel=\"stylesheet\" href=\"/public/style.css\" />\n      </head>\n\n      <body>\n        <div id=\"root\">" + body + "</div>\n      </body>\n\n      <script>\n      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');\n      ga('create', 'UA-99830702-1', 'auto');\n      ga('send', 'pageview');\n      </script>\n      \n      <script src=\"/dist/client/client.bundle.js\"></script>\n      <script src=\"https://code.jquery.com/jquery-3.1.1.min.js\" integrity=\"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=\" crossorigin=\"anonymous\"></script>\n      <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n    </html>\n  ";
 };
 
 /***/ }),
@@ -1177,8 +1177,6 @@ var _Footer = __webpack_require__(1);
 
 var _Footer2 = _interopRequireDefault(_Footer);
 
-__webpack_require__(24);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1186,6 +1184,10 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+if (process.env.IS_BROWSER) {
+  __webpack_require__(24);
+}
 
 var Contact = function (_React$Component) {
   _inherits(Contact, _React$Component);
